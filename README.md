@@ -30,9 +30,13 @@ python scripts/serve_api.py --config configs/serve.default.yaml
 ```
 
 ## Initial Research Signals (2025–2026)
-- CMP-focused benchmark signals: CMPhysBench, CMT-Benchmark
-- Retrieval quality strongly impacts scientific QA reliability
-- Multi-stage retrieval + reranking improves long-context robustness
+- **Benchmarks:** CMPhysBench, CMT-Benchmark for CMP-specific evaluation
+- **Architecture:** Hybrid RAG + LoRA fine-tuning is the 2025-2026 best practice for scientific domains
+- **Key Methods:** 
+  - Parameter-Efficient Fine-Tuning (LoRA/QLoRA) for domain adaptation
+  - Domain-Adaptive Pretraining (DAPT) before SFT for better convergence
+  - Multi-stage retrieval with reranking for long-context scientific QA
+- **Recommended Base Models (2026):** DeepSeek-R1, Qwen3-235B-A22B, Mistral-7B-Instruct
 
 ## License
 Apache-2.0

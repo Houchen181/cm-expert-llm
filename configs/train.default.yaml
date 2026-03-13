@@ -1,13 +1,31 @@
+# Training Configuration for CM-Expert-LLM
+# Follows 2025-2026 best practices: DAPT -> LoRA SFT
+
 base_model: mistralai/Mistral-7B-Instruct-v0.3
+
+# Stage 1: Domain-Adaptive Pretraining (Optional but Recommended)
+# Train on raw domain corpus to adapt base model before instruction tuning
+dapt:
+  enabled: false
+  data_file: ./data/processed/dapt_corpus.jsonl
+  epochs: 1
+  lr: 1e-4
+
+# Stage 2: LoRA Supervised Fine-Tuning
 train_file: ./data/processed/sft.jsonl
 output_dir: ./artifacts/lora-cmp
+
 lora:
   r: 32
   alpha: 64
   dropout: 0.05
+  target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+
 training:
   epochs: 3
   lr: 2e-4
   batch_size: 2
   grad_accum: 16
   max_length: 4096
+  warmup_ratio: 0.1
+  weight_decay: 0.01
