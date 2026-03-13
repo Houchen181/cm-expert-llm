@@ -1,0 +1,9 @@
+[project]
+name = "cm-expert-llm"
+version = "0.1.0"
+description = "Condensed matter domain-expert LLM toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

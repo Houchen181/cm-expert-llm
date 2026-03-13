@@ -1,0 +1,8 @@
+benchmark_sets:
+  - cmphysbench
+  - cmt_benchmark
+checks:
+  - exact_or_equiv
+  - citation_grounding
+  - hallucination_rate
+report_path: ./artifacts/eval/report.json

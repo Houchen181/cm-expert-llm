@@ -1,0 +1,13 @@
+base_model: mistralai/Mistral-7B-Instruct-v0.3
+train_file: ./data/processed/sft.jsonl
+output_dir: ./artifacts/lora-cmp
+lora:
+  r: 32
+  alpha: 64
+  dropout: 0.05
+training:
+  epochs: 3
+  lr: 2e-4
+  batch_size: 2
+  grad_accum: 16
+  max_length: 4096

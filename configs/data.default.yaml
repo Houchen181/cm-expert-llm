@@ -1,0 +1,15 @@
+input_paths:
+  - ./data/raw
+output_dir: ./data/processed
+chunk:
+  tokens: 800
+  overlap: 120
+metadata_fields:
+  - title
+  - authors
+  - venue
+  - year
+  - section
+filters:
+  min_chars: 400
+  languages: ["en"]
