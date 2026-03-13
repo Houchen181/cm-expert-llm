@@ -1,171 +1,108 @@
 """
-Data ingestion pipeline for CM-Expert-LLM.
+Data Ingestion Pipeline for CM-Expert-LLM.
 
-Ingests raw text files (papers, textbooks, notes) and converts them to
-a normalized JSONL format suitable for training/fine-tuning.
-
-Features:
-- Recursive directory scanning
-- Minimum length filtering
-- Metadata extraction (source, timestamp)
-- Optional chunking for long documents
+Ingests raw text/markdown/PDF files from `data/raw`, chunks them, and outputs
+a normalized JSONL file for training/evaluation.
 """
-
-from pathlib import Path
 import json
-from datetime import datetime
+import argparse
+from pathlib import Path
 from typing import List, Dict, Any
+import re
 
+def load_text_file(file_path: Path) -> str:
+    """Load text content from a file."""
+    try:
+        return file_path.read_text(encoding='utf-8', errors='ignore')
+    except Exception as e:
+        print(f"Error reading {file_path}: {e}")
+        return ""
 
-def chunk_text(text: str, tokens: int = 800, overlap: int = 120) -> List[str]:
+def chunk_text(text: str, chunk_size: int = 800, overlap: int = 120) -> List[str]:
     """
-    Split text into overlapping chunks.
-    
-    Args:
-        text: Input text to chunk
-        tokens: Target tokens per chunk (approximate, using char ratio)
-        overlap: Overlap between chunks
-    
-    Returns:
-        List of text chunks
+    Split text into overlapping chunks of approximately `chunk_size` tokens/words.
+    Simple word-based chunking for scaffold; upgrade to token-based later.
     """
-    # Simple character-based chunking (approximate tokens)
-    # 1 token ≈ 4 characters for English
-    chars_per_token = 4
-    chunk_size = tokens * chars_per_token
-    overlap_size = overlap * chars_per_token
-    
+    words = text.split()
     chunks = []
+    if len(words) == 0:
+        return chunks
+    
     start = 0
-    while start < len(text):
+    while start < len(words):
         end = start + chunk_size
-        chunk = text[start:end]
-        
-        # Try to break at sentence/paragraph boundaries
-        if end < len(text) and not chunk.endswith('\n'):
-            # Look for sentence boundary
-            for sep in ['. ', '\n\n', '.\n', '! ', '? ']:
-                last_sep = chunk.rfind(sep)
-                if last_sep > chunk_size // 2:
-                    chunk = chunk[:start + last_sep + len(sep)]
-                    break
-        
-        if chunk.strip():
-            chunks.append(chunk.strip())
-        
-        # Move with overlap
-        if len(chunk) < chunk_size:
+        chunk_words = words[start:end]
+        if not chunk_words:
             break
-        start += chunk_size - overlap_size
-    
-    return chunks if chunks else [text]
+        chunks.append(" ".join(chunk_words))
+        start += chunk_size - overlap
+        if start >= len(words):
+            break
+    return chunks
 
-
-def extract_metadata(source_path: Path) -> Dict[str, Any]:
-    """Extract metadata from source file path and content."""
-    return {
-        "source_file": str(source_path),
-        "source_type": "text_file",
-        "timestamp": datetime.now().isoformat(),
+def extract_metadata(file_path: Path, content: str) -> Dict[str, Any]:
+    """Extract or infer metadata from file content and path."""
+    meta = {
+        "source_file": str(file_path),
+        "char_count": len(content),
+        "type": "raw_text"
     }
+    # Simple heuristic: if file looks like a paper (has 'Abstract' or 'Authors')
+    if re.search(r'abstract|authors|keywords', content[:500].lower()):
+        meta["type"] = "scientific_paper"
+    return meta
 
-
-def build_corpus(
-    input_dir: str,
-    output_file: str,
-    min_chars: int = 400,
-    chunk_tokens: int = 800,
-    chunk_overlap: int = 120,
-    enable_chunking: bool = True
-) -> int:
-    """
-    Build a corpus from raw text files.
+def process_directory(input_dir: Path, output_file: Path, chunk_size: int, overlap: int) -> None:
+    """Process all text files in input_dir and write to output_file."""
+    output_file.parent.mkdir(parents=True, exist_ok=True)
     
-    Args:
-        input_dir: Directory containing raw .txt files
-        output_file: Output JSONL file path
-        min_chars: Minimum characters for a valid document
-        chunk_tokens: Target tokens per chunk (if chunking enabled)
-        chunk_overlap: Overlap between chunks
-        enable_chunking: Whether to chunk long documents
-    
-    Returns:
-        Number of records written
-    """
-    in_path = Path(input_dir)
-    output_path = Path(output_file)
-    
-    if not in_path.exists():
-        print(f"Input directory {input_dir} does not exist. Creating empty corpus.")
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text("", encoding="utf-8")
-        return 0
-    
-    records_written = 0
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    
-    with open(output_path, 'w', encoding='utf-8') as f:
-        for txt_file in sorted(in_path.rglob('*.txt')):
-            try:
-                text = txt_file.read_text(encoding='utf-8', errors='ignore').strip()
-            except Exception as e:
-                print(f"Warning: Could not read {txt_file}: {e}")
-                continue
-            
-            if len(text) < min_chars:
-                print(f"Skipping {txt_file}: too short ({len(text)} < {min_chars} chars)")
-                continue
-            
-            metadata = extract_metadata(txt_file)
-            
-            if enable_chunking and len(text) > chunk_tokens * 4:
-                # Chunk long documents
-                chunks = chunk_text(text, chunk_tokens, chunk_overlap)
+    total_chunks = 0
+    with open(output_file, 'w', encoding='utf-8') as f_out:
+        for file_path in input_dir.rglob('*'):
+            if file_path.is_file() and file_path.suffix in ['.txt', '.md', '.tex']:
+                content = load_text_file(file_path)
+                if len(content.strip()) < 400:
+                    continue  # Skip very short files
+                
+                meta = extract_metadata(file_path, content)
+                chunks = chunk_text(content, chunk_size, overlap)
+                
                 for i, chunk in enumerate(chunks):
-                    if len(chunk) >= min_chars:
-                        record = {
-                            "text": chunk,
-                            "source": metadata["source_file"],
-                            "chunk_id": i,
-                            "total_chunks": len(chunks),
-                            "metadata": metadata
+                    record = {
+                        "id": f"{meta['source_file']}#chunk{i}",
+                        "text": chunk,
+                        "metadata": {
+                            **meta,
+                            "chunk_index": i,
+                            "total_chunks": len(chunks)
                         }
-                        f.write(json.dumps(record, ensure_ascii=False) + '\n')
-                        records_written += 1
-            else:
-                # Keep as single record
-                record = {
-                    "text": text,
-                    "source": metadata["source_file"],
-                    "chunk_id": 0,
-                    "total_chunks": 1,
-                    "metadata": metadata
-                }
-                f.write(json.dumps(record, ensure_ascii=False) + '\n')
-                records_written += 1
+                    }
+                    f_out.write(json.dumps(record, ensure_ascii=False) + '\n')
+                    total_chunks += 1
+                print(f"Processed {file_path.name}: {len(chunks)} chunks")
     
-    print(f"Corpus built: {records_written} records written to {output_file}")
-    return records_written
+    print(f"Ingestion complete. Total chunks written: {total_chunks} to {output_file}")
 
-
-if __name__ == '__main__':
-    import argparse
-    
-    parser = argparse.ArgumentParser(description='Build corpus from raw text files')
-    parser.add_argument('--input', '-i', default='./data/raw', help='Input directory')
-    parser.add_argument('--output', '-o', default='./data/processed/sft.jsonl', help='Output file')
-    parser.add_argument('--min-chars', type=int, default=400, help='Minimum characters')
-    parser.add_argument('--chunk-tokens', type=int, default=800, help='Tokens per chunk')
-    parser.add_argument('--chunk-overlap', type=int, default=120, help='Chunk overlap')
-    parser.add_argument('--no-chunking', action='store_true', help='Disable chunking')
+def main():
+    parser = argparse.ArgumentParser(description='Ingest raw data for CM-Expert-LLM')
+    parser.add_argument('--input-dir', type=str, default='./data/raw', help='Input directory')
+    parser.add_argument('--output-file', type=str, default='./data/processed/sft.jsonl', help='Output JSONL file')
+    parser.add_argument('--chunk-size', type=int, default=800, help='Chunk size (words)')
+    parser.add_argument('--overlap', type=int, default=120, help='Overlap size (words)')
     
     args = parser.parse_args()
     
-    build_corpus(
-        input_dir=args.input,
-        output_file=args.output,
-        min_chars=args.min_chars,
-        chunk_tokens=args.chunk_tokens,
-        chunk_overlap=args.chunk_overlap,
-        enable_chunking=not args.no_chunking
-    )
+    input_path = Path(args.input_dir)
+    output_path = Path(args.output_file)
+    
+    if not input_path.exists():
+        print(f"Input directory {input_path} does not exist. Creating placeholder...")
+        input_path.mkdir(parents=True, exist_ok=True)
+        (input_path / "README.md").write_text("# Raw Data\nPlace your raw text/markdown files here.")
+        print(f"Placeholder created at {input_path}. Please add files and re-run.")
+        return
+
+    process_directory(input_path, output_path, args.chunk_size, args.overlap)
+
+if __name__ == '__main__':
+    main()
