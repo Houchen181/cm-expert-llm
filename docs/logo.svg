@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="180" fill="#1a1a2e" stroke="#16213e" stroke-width="3"/>
+  
+  <!-- Outer Ring - Electron Orbit -->
+  <ellipse cx="200" cy="200" rx="140" ry="60" fill="none" stroke="#0f3460" stroke-width="3" transform="rotate(-45 200 200)"/>
+  <ellipse cx="200" cy="200" rx="140" ry="60" fill="none" stroke="#0f3460" stroke-width="3" transform="rotate(45 200 200)"/>
+  <ellipse cx="200" cy="200" rx="140" ry="60" fill="none" stroke="#0f3460" stroke-width="3" transform="rotate(90 200 200)"/>
+  
+  <!-- Central Nucleus -->
+  <circle cx="200" cy="200" r="30" fill="#e94560"/>
+  
+  <!-- Electron 1 -->
+  <circle cx="270" cy="130" r="12" fill="#00d9ff">
+    <animate attributeName="cx" values="270;130;270" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="130;270;130" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Electron 2 -->
+  <circle cx="130" cy="130" r="12" fill="#00d9ff">
+    <animate attributeName="cx" values="130;270;130" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="130;270;130" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Brain/Network Pattern (subtle background) -->
+  <g opacity="0.3">
+    <circle cx="150" cy="150" r="5" fill="#16213e"/>
+    <circle cx="250" cy="150" r="5" fill="#16213e"/>
+    <circle cx="150" cy="250" r="5" fill="#16213e"/>
+    <circle cx="250" cy="250" r="5" fill="#16213e"/>
+    <line x1="150" y1="150" x2="250" y2="150" stroke="#16213e" stroke-width="2"/>
+    <line x1="150" y1="150" x2="150" y2="250" stroke="#16213e" stroke-width="2"/>
+    <line x1="250" y1="150" x2="250" y2="250" stroke="#16213e" stroke-width="2"/>
+    <line x1="150" y1="250" x2="250" y2="250" stroke="#16213e" stroke-width="2"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="340" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#e94560" text-anchor="middle">CM-EXPERT</text>
+  <text x="200" y="365" font-family="Arial, sans-serif" font-size="14" fill="#0f3460" text-anchor="middle">Condensed Matter Physics LLM</text>
+</svg>
