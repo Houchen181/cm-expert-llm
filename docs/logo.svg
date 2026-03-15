@@ -1,40 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <!-- Background Circle -->
-  <circle cx="200" cy="200" r="180" fill="#1a1a2e" stroke="#16213e" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Background - Dark for contrast -->
+  <rect width="500" height="500" fill="#0b0f19"/>
   
-  <!-- Outer Ring - Electron Orbit -->
-  <ellipse cx="200" cy="200" rx="140" ry="60" fill="none" stroke="#0f3460" stroke-width="3" transform="rotate(-45 200 200)"/>
-  <ellipse cx="200" cy="200" rx="140" ry="60" fill="none" stroke="#0f3460" stroke-width="3" transform="rotate(45 200 200)"/>
-  <ellipse cx="200" cy="200" rx="140" ry="60" fill="none" stroke="#0f3460" stroke-width="3" transform="rotate(90 200 200)"/>
+  <!-- Outer glow ring -->
+  <circle cx="250" cy="250" r="180" fill="none" stroke="#1e3a8a" stroke-width="2" opacity="0.4"/>
   
-  <!-- Central Nucleus -->
-  <circle cx="200" cy="200" r="30" fill="#e94560"/>
+  <!-- Orbit paths - high contrast blue -->
+  <circle cx="250" cy="250" r="140" fill="none" stroke="#3b82f6" stroke-width="4" opacity="0.8"/>
+  <ellipse cx="250" cy="250" rx="140" ry="60" fill="none" stroke="#60a5fa" stroke-width="3" transform="rotate(60 250 250)" opacity="0.9"/>
+  <ellipse cx="250" cy="250" rx="140" ry="60" fill="none" stroke="#60a5fa" stroke-width="3" transform="rotate(-60 250 250)" opacity="0.9"/>
   
-  <!-- Electron 1 -->
-  <circle cx="270" cy="130" r="12" fill="#00d9ff">
-    <animate attributeName="cx" values="270;130;270" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="130;270;130" dur="3s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Central nucleus - bright core -->
+  <circle cx="250" cy="250" r="35" fill="#1e40af"/>
+  <circle cx="250" cy="250" r="28" fill="#3b82f6"/>
+  <circle cx="250" cy="250" r="18" fill="#60a5fa"/>
+  <circle cx="250" cy="250" r="10" fill="#dbeafe"/>
   
-  <!-- Electron 2 -->
-  <circle cx="130" cy="130" r="12" fill="#00d9ff">
-    <animate attributeName="cx" values="130;270;130" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="130;270;130" dur="3s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Electrons - bright, distinct colors -->
+  <circle cx="390" cy="250" r="10" fill="#f472b6"/>
+  <circle cx="165" cy="285" r="10" fill="#34d399"/>
+  <circle cx="165" cy="215" r="10" fill="#fbbf24"/>
   
-  <!-- Brain/Network Pattern (subtle background) -->
-  <g opacity="0.3">
-    <circle cx="150" cy="150" r="5" fill="#16213e"/>
-    <circle cx="250" cy="150" r="5" fill="#16213e"/>
-    <circle cx="150" cy="250" r="5" fill="#16213e"/>
-    <circle cx="250" cy="250" r="5" fill="#16213e"/>
-    <line x1="150" y1="150" x2="250" y2="150" stroke="#16213e" stroke-width="2"/>
-    <line x1="150" y1="150" x2="150" y2="250" stroke="#16213e" stroke-width="2"/>
-    <line x1="250" y1="150" x2="250" y2="250" stroke="#16213e" stroke-width="2"/>
-    <line x1="150" y1="250" x2="250" y2="250" stroke="#16213e" stroke-width="2"/>
-  </g>
+  <!-- Electron glow effects -->
+  <circle cx="390" cy="250" r="14" fill="#f472b6" opacity="0.3"/>
+  <circle cx="165" cy="285" r="14" fill="#34d399" opacity="0.3"/>
+  <circle cx="165" cy="215" r="14" fill="#fbbf24" opacity="0.3"/>
   
-  <!-- Text -->
-  <text x="200" y="340" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#e94560" text-anchor="middle">CM-EXPERT</text>
-  <text x="200" y="365" font-family="Arial, sans-serif" font-size="14" fill="#0f3460" text-anchor="middle">Condensed Matter Physics LLM</text>
+  <!-- Main text - LARGE, BOLD, HIGH CONTRAST -->
+  <text x="250" y="420" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="3">CM-EXPERT</text>
+  
+  <!-- Subtitle - clear and readable -->
+  <text x="250" y="455" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#93c5fd" text-anchor="middle" letter-spacing="1">Condensed Matter Physics LLM</text>
+  
+  <!-- Corner decorations for visual interest -->
+  <circle cx="60" cy="60" r="4" fill="#60a5fa" opacity="0.6"/>
+  <circle cx="440" cy="60" r="4" fill="#60a5fa" opacity="0.6"/>
+  <circle cx="60" cy="440" r="4" fill="#60a5fa" opacity="0.6"/>
+  <circle cx="440" cy="440" r="4" fill="#60a5fa" opacity="0.6"/>
+  
+  <!-- Additional orbit dots -->
+  <circle cx="250" cy="110" r="3" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="250" cy="390" r="3" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="110" cy="250" r="3" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="390" cy="250" r="3" fill="#3b82f6" opacity="0.7"/>
 </svg>

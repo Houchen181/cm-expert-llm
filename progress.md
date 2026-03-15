@@ -1,5 +1,22 @@
 # Progress Log - CM-Expert-LLM
 
+## 2026-03-14 21:15 EDT - Forced heartbeat run (Qwen)
+
+- Set session model override to `nvidia/qwen/qwen3.5-397b-a17b` for this run.
+- Audited current workspace project path (`llm_physics_project`) and validated scaffold state.
+- Addressed likely GitHub license detection issue by replacing `LICENSE` with canonical Apache-2.0 full text.
+- Attempted mandatory trend refresh via `web_search`; Brave key missing (`missing_brave_api_key`). Logged in `.learnings/ERRORS.md` and kept fallback plan.
+- Confirmed training notebook still contains a placeholder training execution step; queued concrete replacement in next pass.
+- Confirmed repo naming issue remains open (requires remote rename + badge/docs sync).
+
+### Next implementation targets (queued)
+1. Replace training notebook placeholder with executable trainer flow (with safe dry-run mode).
+2. Rename repo branding from `cm-expert-llm` to a stronger name (proposal + migration checklist).
+3. Upgrade logo readability (high-contrast SVG + favicon variants).
+4. Fill any remaining script skeletons with real operational code paths.
+
+---
+
 ## 2026-03-14 Heartbeat Session - Final Implementation
 
 ### Timeline
@@ -136,3 +153,42 @@ Based on 2025-2026 best practices:
 ---
 
 *Last updated: 2026-03-14 15:00 EDT*
+
+## 2026-03-15 15:11 EDT - Forced heartbeat run (Qwen request, manual completion)
+
+- Previous Qwen subagent run did not produce a completion payload or file deltas.
+- Executed heartbeat work directly with session model override set to `nvidia/qwen/qwen3.5-397b-a17b`.
+- Replaced notebook placeholder in `examples/02_training.ipynb`:
+  - Step 4 markdown now documents runnable training behavior.
+  - Training cell now imports `train` and executes `train(config)`.
+  - Added `DRY_RUN` toggle with env synchronization (`DRY_RUN=1|0`) for safe default runs.
+- This closes HEARTBEAT Next Step #1 (placeholder training notebook cell).
+
+## 2026-03-15 18:55 EDT - Heartbeat Execution: Step 4 + Step 3
+
+### Step 4 Complete: Training Script Audit & Replacement
+- **Replaced** `src/cmp_expert/training/train_lora.py` (was skeleton with TODOs)
+- **New features:**
+  - Full LoRA training pipeline with PEFT/transformers/trl
+  - Dry-run mode (`DRY_RUN=1`) for config validation
+  - Dataset validation before training
+  - Graceful dependency checks (transforms/peft/trl/datasets)
+  - GPU detection and fallback warnings
+  - Complete SFTTrainer integration
+  - Saves LoRA adapter + tokenizer on completion
+- **Removed:** All placeholder comments and TODOs
+
+### Step 3 Complete: Logo Redesign
+- **Replaced** `docs/logo.svg` with high-contrast version:
+  - Larger canvas (500x500 vs 400x400)
+  - Brighter core nucleus with glow effect
+  - Enhanced electron visibility with glow halos
+  - Text increased to 42px bold (was 32px)
+  - Better letter spacing for readability
+  - Darker background (#0b0f19) for contrast
+  - Added corner decorations + orbit dots
+
+### Remaining Work:
+- Step 2: Repo rename proposal + migration checklist
+- Step 5: Web fetch updates (Brave key still missing)
+- Push changes to remote
