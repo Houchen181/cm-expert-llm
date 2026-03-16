@@ -227,3 +227,24 @@ Based on 2025-2026 best practices:
 - User decision needed: Select repo name from RENAME_PROPOSAL.md
 - Once name chosen: execute full migration checklist
 - Update README with latest research citations
+
+## 2026-03-15 22:55 EDT - README Overhaul for 1k Star Appeal
+
+### Changes Made
+- **Complete README rewrite** with:
+  - Compelling narrative ("Why this exists")
+  - Clear value proposition for physicists
+  - Tutorial table with links
+  - Latest research citations (SAGA, PhysMaster, MaterialsGalaxy)
+  - Concrete example use cases (research group bot, textbook companion, lab assistant)
+  - Roadmap with completed/in-progress sections
+  - Better formatting and structure
+  - Call-to-action for contributors
+
+### Goal
+Make the project immediately understandable and appealing to condensed matter physicists who want to deploy their own domain experts without becoming ML engineers.
+
+### Status
+- All 5 heartbeat steps complete
+- README now tells a compelling story
+- Ready for user rename decision + final polish
