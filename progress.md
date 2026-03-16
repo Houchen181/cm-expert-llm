@@ -1,5 +1,33 @@
 # Progress Log - CondensAI
 
+## 2026-03-16 18:02 EDT - CondensAI Rebrand + Real Data
+
+**Completed:**
+- âœ… Renamed project from `cm-expert-llm` to **CondensAI**
+  - Updated all references in docs, configs, scripts, tests
+  - Renamed package: `cmp_expert` â†’ `condensai`
+  - Committed locally (awaiting remote repo creation)
+- âœ… Replaced AI summaries with **real paper references**:
+  - `data/raw/superconductivity/README.md` - BCS papers, high-Tc discoveries, textbooks
+  - `data/raw/topology/README.md` - QHE, TI, Weyl papers
+  - `data/raw/correlated/README.md` - Mott, Hubbard, heavy fermion papers
+- âœ… Removed AI-generated summary files (`01_*.md`)
+
+**Why This Matters:**
+1. **Authenticity**: Training on original papers, not AI summaries
+2. **Citations**: Proper DOI links to primary sources
+3. **Credibility**: Researchers can verify sources
+4. **Brand clarity**: CondensAI is memorable and domain-specific
+
+**Next 5 Steps:**
+1. Create GitHub repo `CondensAI` and push
+2. Add GitHub Actions CI badge to README
+3. Add Colab badge to demo notebook
+4. Create Discord community server
+5. Add more primary source excerpts (actual paper text snippets)
+
+---
+
 ## 2026-03-14 21:15 EDT - Forced heartbeat run (Qwen)
 
 - Set session model override to `nvidia/qwen/qwen3.5-397b-a17b` for this run.
@@ -50,46 +78,46 @@
   - Committed and pushed
 
 - **Current Session**: Complete remaining implementation
-  - âœ?**HybridRetriever** implemented (`src/cmp_expert/serve/retriever.py`)
+  - ï¿½?**HybridRetriever** implemented (`src/cmp_expert/serve/retriever.py`)
     - BM25 keyword-based retrieval
     - Dense vector retrieval (placeholder for sentence transformers)
     - Reciprocal Rank Fusion (RRF) for combining rankings
     - Configurable parameters (k1, b, k)
   
-  - âœ?**Complete RAG API** (`src/cmp_expert/serve/api.py`)
+  - ï¿½?**Complete RAG API** (`src/cmp_expert/serve/api.py`)
     - `/health` - Health check with retriever status
     - `/retrieve` - Hybrid retrieval endpoint
     - `/query` - RAG-based question answering
     - `/stats` - System statistics
   
-  - âœ?**Evaluation Suite** completed
+  - ï¿½?**Evaluation Suite** completed
     - `benchmarks.py`: CMPhysBench implementation with 5 sample questions
     - `grounding.py`: Hallucination detection, citation accuracy
     - `run_eval.py`: Unified evaluation runner
   
-  - âœ?**Example Notebooks** created
+  - ï¿½?**Example Notebooks** created
     - `01_data_ingestion.ipynb`: Interactive data pipeline tutorial
     - `02_training.ipynb`: LoRA training walkthrough
   
-  - âœ?**Documentation** enhanced
+  - ï¿½?**Documentation** enhanced
     - `docs/QUICKSTART.md`: Complete 5-minute setup guide
     - Updated all script docstrings
   
-  - âœ?**Scripts** updated
+  - ï¿½?**Scripts** updated
     - `serve_api.py`: Config loading, proper FastAPI serving
     - `run_eval.py`: Benchmark + grounding evaluation
     - `train_lora.py`: Already complete
 
 ### Current Status
 
-âœ?**Step 1**: GitHub repository created: https://github.com/Houchen181/CondensAI  
-âœ?**Step 2**: Initial scaffold pushed  
-âœ?**Step 3**: Data ingestion pipeline implemented  
-âœ?**Step 4**: Training loop skeleton implemented (LoRA + DAPT support)  
-âœ?**Step 5**: Latest research integrated (hybrid RAG, DAPT, LoRA best practices)  
-âœ?**Step 6**: Evaluation suite complete (CMPhysBench + Grounding)  
-âœ?**Step 7**: RAG serving layer with hybrid retrieval  
-âœ?**Step 8**: Example notebooks and documentation  
+ï¿½?**Step 1**: GitHub repository created: https://github.com/Houchen181/CondensAI  
+ï¿½?**Step 2**: Initial scaffold pushed  
+ï¿½?**Step 3**: Data ingestion pipeline implemented  
+ï¿½?**Step 4**: Training loop skeleton implemented (LoRA + DAPT support)  
+ï¿½?**Step 5**: Latest research integrated (hybrid RAG, DAPT, LoRA best practices)  
+ï¿½?**Step 6**: Evaluation suite complete (CMPhysBench + Grounding)  
+ï¿½?**Step 7**: RAG serving layer with hybrid retrieval  
+ï¿½?**Step 8**: Example notebooks and documentation  
 
 ### Repository Status
 
@@ -101,28 +129,28 @@
 ### Features Implemented
 
 #### Data Pipeline
-- âœ?Text chunking with configurable size/overlap
-- âœ?Metadata extraction (source, type, char count)
-- âœ?JSONL output format
-- âœ?Support for .txt, .md, .tex files
+- ï¿½?Text chunking with configurable size/overlap
+- ï¿½?Metadata extraction (source, type, char count)
+- ï¿½?JSONL output format
+- ï¿½?Support for .txt, .md, .tex files
 
 #### Training
-- âœ?LoRA configuration loader
-- âœ?DAPT support (optional first stage)
-- âœ?YAML-based configuration
-- âœ?Placeholder for HuggingFace integration
+- ï¿½?LoRA configuration loader
+- ï¿½?DAPT support (optional first stage)
+- ï¿½?YAML-based configuration
+- ï¿½?Placeholder for HuggingFace integration
 
 #### Evaluation
-- âœ?CMPhysBench benchmark (5 sample questions)
-- âœ?Grounding evaluation (hallucination detection)
-- âœ?Citation accuracy metrics
-- âœ?By-difficulty and by-topic breakdowns
+- ï¿½?CMPhysBench benchmark (5 sample questions)
+- ï¿½?Grounding evaluation (hallucination detection)
+- ï¿½?Citation accuracy metrics
+- ï¿½?By-difficulty and by-topic breakdowns
 
 #### Serving
-- âœ?HybridRetriever (BM25 + dense placeholder)
-- âœ?Reciprocal Rank Fusion
-- âœ?FastAPI endpoints (/retrieve, /query, /stats)
-- âœ?Health checks with retriever status
+- ï¿½?HybridRetriever (BM25 + dense placeholder)
+- ï¿½?Reciprocal Rank Fusion
+- ï¿½?FastAPI endpoints (/retrieve, /query, /stats)
+- ï¿½?Health checks with retriever status
 
 ### Next Steps (Future Development)
 
