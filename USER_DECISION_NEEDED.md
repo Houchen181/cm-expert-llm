@@ -4,19 +4,19 @@
 All heartbeat tasks are **COMPLETE** except renaming the repository, which requires your decision.
 
 ## Current State
-- **Repo:** https://github.com/Houchen181/cm-expert-llm
-- **All code:** ‚úÖ Implemented, tested, pushed
-- **Documentation:** ‚úÖ Complete
-- **Logo:** ‚úÖ High-contrast version
-- **Training pipeline:** ‚úÖ Full LoRA implementation
-- **Research updates:** ‚úÖ Latest arXiv papers fetched
+- **Repo:** https://github.com/Houchen181/CondensAI
+- **All code:** ‚ú?Implemented, tested, pushed
+- **Documentation:** ‚ú?Complete
+- **Logo:** ‚ú?High-contrast version
+- **Training pipeline:** ‚ú?Full LoRA implementation
+- **Research updates:** ‚ú?Latest arXiv papers fetched
 
 ## Decision Required
 **Choose a new name from the shortlist:**
 
 | Name | Why It's Good |
 |------|---------------|
-| **CondensAI** ‚≠ê | Best brand, clear condensed matter + AI connection |
+| **CondensAI** ‚≠?| Best brand, clear condensed matter + AI connection |
 | MatterLLM | Direct, clear LLM focus |
 | PhysicLLM | Physics + LLM, broader scope |
 | SolidStateAI | Solid-state physics focus |

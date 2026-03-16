@@ -11,7 +11,7 @@ from pathlib import Path
 src_path = Path(__file__).parent.parent / 'src'
 sys.path.insert(0, str(src_path))
 
-from cmp_expert.data.pipeline import main as run_pipeline
+from condensai.data.pipeline import main as run_pipeline
 
 if __name__ == '__main__':
     run_pipeline()

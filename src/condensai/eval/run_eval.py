@@ -1,5 +1,5 @@
 """
-Run benchmark evaluations for CM-Expert-LLM.
+Run benchmark evaluations for CondensAI.
 Supports:
 - CMPhysBench: Condensed matter physics problems
 - CMT-Benchmark: Theory understanding
@@ -158,7 +158,7 @@ def run_grounding_eval(corpus_path: Optional[Path] = None,
 
 def main():
     """Main evaluation runner."""
-    parser = argparse.ArgumentParser(description='Run CM-Expert-LLM evaluations')
+    parser = argparse.ArgumentParser(description='Run CondensAI evaluations')
     parser.add_argument('--benchmark', action='store_true', 
                        help='Run CMPhysBench evaluation')
     parser.add_argument('--grounding', action='store_true',

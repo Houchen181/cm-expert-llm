@@ -1,4 +1,4 @@
-# Quick Start Guide - CM-Expert-LLM
+# Quick Start Guide - CondensAI
 
 Get your condensed matter physics expert LLM running in 5 minutes!
 
@@ -12,8 +12,8 @@ Get your condensed matter physics expert LLM running in 5 minutes!
 
 ```bash
 # Clone the repository
-git clone https://github.com/Houchen181/cm-expert-llm.git
-cd cm-expert-llm
+git clone https://github.com/Houchen181/CondensAI.git
+cd CondensAI
 
 # Create virtual environment
 python -m venv .venv
@@ -112,17 +112,17 @@ curl -X POST http://localhost:8080/query \
 ## Project Structure
 
 ```
-cm-expert-llm/
+CondensAI/
 ├── src/cmp_expert/
-│   ├── data/          # Data ingestion pipeline
-│   ├── training/      # LoRA training scripts
-│   ├── eval/          # Benchmark evaluations
-│   └── serve/         # RAG API serving
+�?  ├── data/          # Data ingestion pipeline
+�?  ├── training/      # LoRA training scripts
+�?  ├── eval/          # Benchmark evaluations
+�?  └── serve/         # RAG API serving
 ├── configs/           # YAML configurations
 ├── scripts/           # Command-line tools
 ├── data/
-│   ├── raw/          # Input documents
-│   └── processed/    # Processed JSONL files
+�?  ├── raw/          # Input documents
+�?  └── processed/    # Processed JSONL files
 ├── examples/          # Jupyter notebooks
 └── docs/             # Documentation
 ```
@@ -219,6 +219,6 @@ netstat -ano | findstr :8080
 
 ## Getting Help
 
-- Issues: https://github.com/Houchen181/cm-expert-llm/issues
-- Documentation: https://github.com/Houchen181/cm-expert-llm/tree/main/docs
-- Examples: https://github.com/Houchen181/cm-expert-llm/tree/main/examples
+- Issues: https://github.com/Houchen181/CondensAI/issues
+- Documentation: https://github.com/Houchen181/CondensAI/tree/main/docs
+- Examples: https://github.com/Houchen181/CondensAI/tree/main/examples

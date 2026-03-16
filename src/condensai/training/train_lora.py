@@ -1,5 +1,5 @@
 """
-LoRA Fine-tuning Script for CM-Expert-LLM.
+LoRA Fine-tuning Script for CondensAI.
 
 Trains a base model (e.g., Mistral-7B, Qwen) on domain-specific condensed matter physics
 data using LoRA (Parameter-Efficient Fine-Tuning).
@@ -77,7 +77,7 @@ def train(config: Dict[str, Any]):
     dry_run = os.environ.get('DRY_RUN', '0') == '1'
     
     print("=" * 60)
-    print("CM-Expert-LLM: LoRA Training Configuration")
+    print("CondensAI: LoRA Training Configuration")
     print("=" * 60)
     print(f"Base Model: {base_model}")
     print(f"Training File: {train_file}")
@@ -202,7 +202,7 @@ def train(config: Dict[str, Any]):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Train LoRA adapter for CM-Expert-LLM')
+    parser = argparse.ArgumentParser(description='Train LoRA adapter for CondensAI')
     parser.add_argument('--config', type=str, default='configs/train.default.yaml',
                         help='Path to training config YAML')
     args = parser.parse_args()

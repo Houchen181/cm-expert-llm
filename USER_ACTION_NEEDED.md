@@ -2,7 +2,7 @@
 
 ## Repository Rename Needed
 
-The current name `cm-expert-llm` is not catchy enough. Here are better alternatives:
+The current name `CondensAI` is not catchy enough. Here are better alternatives:
 
 ### Suggested Names:
 

@@ -1,11 +1,11 @@
 # Repository Rename Proposal
 
 ## Current Name
-- **Current:** `cm-expert-llm`
-- **URL:** https://github.com/Houchen181/cm-expert-llm
+- **Current:** `CondensAI`
+- **URL:** https://github.com/Houchen181/CondensAI
 
 ## Problem
-The current name `cm-expert-llm` is functional but not memorable or brandable. To reach 1k stars, we need a name that:
+The current name `CondensAI` is functional but not memorable or brandable. To reach 1k stars, we need a name that:
 - Is catchy and easy to remember
 - Clearly indicates the domain (condensed matter physics)
 - Suggests AI/LLM capability
@@ -15,11 +15,11 @@ The current name `cm-expert-llm` is functional but not memorable or brandable. T
 
 | Rank | Name | Pros | Cons | Availability Check |
 |------|------|------|------|-------------------|
-| 1 | **CondensAI** | Short, memorable, combines "condensed" + "AI", unique | May be confused with general condensed matter AI (not just LLM) | âœ… Need to verify |
-| 2 | **MatterLLM** | Direct, clear, indicates matter physics + LLM | Slightly generic | âœ… Need to verify |
-| 3 | **PhysicLLM** | Physics + LLM, clear domain | Less specific to condensed matter | âœ… Need to verify |
-| 4 | **SolidStateAI** | Refers to solid-state physics (subset of CM) | May be too narrow (excludes soft matter, etc.) | âœ… Need to verify |
-| 5 | **QuarkLLM** | Short, physics-related, memorable | Quarks are particle physics, not condensed matter (misleading) | âœ… Need to verify |
+| 1 | **CondensAI** | Short, memorable, combines "condensed" + "AI", unique | May be confused with general condensed matter AI (not just LLM) | âœ?Need to verify |
+| 2 | **MatterLLM** | Direct, clear, indicates matter physics + LLM | Slightly generic | âœ?Need to verify |
+| 3 | **PhysicLLM** | Physics + LLM, clear domain | Less specific to condensed matter | âœ?Need to verify |
+| 4 | **SolidStateAI** | Refers to solid-state physics (subset of CM) | May be too narrow (excludes soft matter, etc.) | âœ?Need to verify |
+| 5 | **QuarkLLM** | Short, physics-related, memorable | Quarks are particle physics, not condensed matter (misleading) | âœ?Need to verify |
 
 ## Recommendation
 **Top Pick: CondensAI**
@@ -42,7 +42,7 @@ Once a new name is selected and verified available:
 - [ ] Notify any existing contributors/stargazers (if applicable)
 
 ### GitHub Actions
-- [ ] Rename repository on GitHub (Settings â†’ Rename)
+- [ ] Rename repository on GitHub (Settings â†?Rename)
 - [ ] Update repository description if needed
 - [ ] Verify GitHub Pages/deployments still work
 

@@ -1,5 +1,5 @@
 """
-Benchmark Evaluations for CM-Expert-LLM.
+Benchmark Evaluations for CondensAI.
 
 Implements evaluation metrics for condensed matter physics LLM assessment:
 - CMPhysBench-style: Domain knowledge, problem-solving, reasoning
@@ -122,7 +122,7 @@ class CMPBenchmark:
             BenchmarkQuestion(
                 id="cm_problem_001",
                 question="Calculate the Fermi energy for a 2D electron gas with density n = 10^15 m^-2.",
-                expected_answer="E_F = (ℏ²πn)/m* ≈ 0.037 eV (for m* = 0.067m_e)",
+                expected_answer="E_F = (ℏ²πn)/m* �?0.037 eV (for m* = 0.067m_e)",
                 benchmark_type=BenchmarkType.PROBLEM_SOLVING,
                 difficulty="hard",
                 topic="electronic_structure"
@@ -130,7 +130,7 @@ class CMPBenchmark:
             BenchmarkQuestion(
                 id="cm_reasoning_001",
                 question="Why does the specific heat of a superconductor show an exponential temperature dependence at low T?",
-                expected_answer="Due to the presence of an energy gap Δ in the quasiparticle spectrum, leading to exponentially suppressed thermal excitations: C ∝ exp(-Δ/k_BT).",
+                expected_answer="Due to the presence of an energy gap Δ in the quasiparticle spectrum, leading to exponentially suppressed thermal excitations: C �?exp(-Δ/k_BT).",
                 benchmark_type=BenchmarkType.REASONING,
                 difficulty="hard",
                 topic="superconductivity"
@@ -287,7 +287,7 @@ class CMPBenchmark:
 def main():
     """Run benchmark evaluation."""
     import argparse
-    parser = argparse.ArgumentParser(description='Run CM-Expert-LLM benchmark')
+    parser = argparse.ArgumentParser(description='Run CondensAI benchmark')
     parser.add_argument('--benchmark-file', type=str, help='Custom benchmark file')
     parser.add_argument('--save', action='store_true', help='Save results')
     args = parser.parse_args()

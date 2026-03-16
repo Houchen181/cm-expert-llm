@@ -1,4 +1,4 @@
-# Progress Log - CM-Expert-LLM
+# Progress Log - CondensAI
 
 ## 2026-03-14 21:15 EDT - Forced heartbeat run (Qwen)
 
@@ -11,7 +11,7 @@
 
 ### Next implementation targets (queued)
 1. Replace training notebook placeholder with executable trainer flow (with safe dry-run mode).
-2. Rename repo branding from `cm-expert-llm` to a stronger name (proposal + migration checklist).
+2. Rename repo branding from `CondensAI` to a stronger name (proposal + migration checklist).
 3. Upgrade logo readability (high-contrast SVG + favicon variants).
 4. Fill any remaining script skeletons with real operational code paths.
 
@@ -33,7 +33,7 @@
   - Created `USER_ACTION_REQUIRED.md` for manual repo creation
 
 - **18:37 PM**: **BLOCKER RESOLVED** - User provided repo URL
-  - Successfully pushed initial scaffold to https://github.com/Houchen181/cm-expert-llm
+  - Successfully pushed initial scaffold to https://github.com/Houchen181/CondensAI
 
 - **18:38 PM**: **Step 3 Complete** - Data ingestion pipeline
   - `src/cmp_expert/data/pipeline.py`: Chunking, metadata extraction, JSONL output
@@ -50,50 +50,50 @@
   - Committed and pushed
 
 - **Current Session**: Complete remaining implementation
-  - âœ… **HybridRetriever** implemented (`src/cmp_expert/serve/retriever.py`)
+  - âœ?**HybridRetriever** implemented (`src/cmp_expert/serve/retriever.py`)
     - BM25 keyword-based retrieval
     - Dense vector retrieval (placeholder for sentence transformers)
     - Reciprocal Rank Fusion (RRF) for combining rankings
     - Configurable parameters (k1, b, k)
   
-  - âœ… **Complete RAG API** (`src/cmp_expert/serve/api.py`)
+  - âœ?**Complete RAG API** (`src/cmp_expert/serve/api.py`)
     - `/health` - Health check with retriever status
     - `/retrieve` - Hybrid retrieval endpoint
     - `/query` - RAG-based question answering
     - `/stats` - System statistics
   
-  - âœ… **Evaluation Suite** completed
+  - âœ?**Evaluation Suite** completed
     - `benchmarks.py`: CMPhysBench implementation with 5 sample questions
     - `grounding.py`: Hallucination detection, citation accuracy
     - `run_eval.py`: Unified evaluation runner
   
-  - âœ… **Example Notebooks** created
+  - âœ?**Example Notebooks** created
     - `01_data_ingestion.ipynb`: Interactive data pipeline tutorial
     - `02_training.ipynb`: LoRA training walkthrough
   
-  - âœ… **Documentation** enhanced
+  - âœ?**Documentation** enhanced
     - `docs/QUICKSTART.md`: Complete 5-minute setup guide
     - Updated all script docstrings
   
-  - âœ… **Scripts** updated
+  - âœ?**Scripts** updated
     - `serve_api.py`: Config loading, proper FastAPI serving
     - `run_eval.py`: Benchmark + grounding evaluation
     - `train_lora.py`: Already complete
 
 ### Current Status
 
-âœ… **Step 1**: GitHub repository created: https://github.com/Houchen181/cm-expert-llm  
-âœ… **Step 2**: Initial scaffold pushed  
-âœ… **Step 3**: Data ingestion pipeline implemented  
-âœ… **Step 4**: Training loop skeleton implemented (LoRA + DAPT support)  
-âœ… **Step 5**: Latest research integrated (hybrid RAG, DAPT, LoRA best practices)  
-âœ… **Step 6**: Evaluation suite complete (CMPhysBench + Grounding)  
-âœ… **Step 7**: RAG serving layer with hybrid retrieval  
-âœ… **Step 8**: Example notebooks and documentation  
+âœ?**Step 1**: GitHub repository created: https://github.com/Houchen181/CondensAI  
+âœ?**Step 2**: Initial scaffold pushed  
+âœ?**Step 3**: Data ingestion pipeline implemented  
+âœ?**Step 4**: Training loop skeleton implemented (LoRA + DAPT support)  
+âœ?**Step 5**: Latest research integrated (hybrid RAG, DAPT, LoRA best practices)  
+âœ?**Step 6**: Evaluation suite complete (CMPhysBench + Grounding)  
+âœ?**Step 7**: RAG serving layer with hybrid retrieval  
+âœ?**Step 8**: Example notebooks and documentation  
 
 ### Repository Status
 
-- **Remote**: https://github.com/Houchen181/cm-expert-llm
+- **Remote**: https://github.com/Houchen181/CondensAI
 - **Latest Commit**: Implementation complete
 - **Branch**: `main`
 - **Files**: 20+ production files
@@ -101,28 +101,28 @@
 ### Features Implemented
 
 #### Data Pipeline
-- âœ… Text chunking with configurable size/overlap
-- âœ… Metadata extraction (source, type, char count)
-- âœ… JSONL output format
-- âœ… Support for .txt, .md, .tex files
+- âœ?Text chunking with configurable size/overlap
+- âœ?Metadata extraction (source, type, char count)
+- âœ?JSONL output format
+- âœ?Support for .txt, .md, .tex files
 
 #### Training
-- âœ… LoRA configuration loader
-- âœ… DAPT support (optional first stage)
-- âœ… YAML-based configuration
-- âœ… Placeholder for HuggingFace integration
+- âœ?LoRA configuration loader
+- âœ?DAPT support (optional first stage)
+- âœ?YAML-based configuration
+- âœ?Placeholder for HuggingFace integration
 
 #### Evaluation
-- âœ… CMPhysBench benchmark (5 sample questions)
-- âœ… Grounding evaluation (hallucination detection)
-- âœ… Citation accuracy metrics
-- âœ… By-difficulty and by-topic breakdowns
+- âœ?CMPhysBench benchmark (5 sample questions)
+- âœ?Grounding evaluation (hallucination detection)
+- âœ?Citation accuracy metrics
+- âœ?By-difficulty and by-topic breakdowns
 
 #### Serving
-- âœ… HybridRetriever (BM25 + dense placeholder)
-- âœ… Reciprocal Rank Fusion
-- âœ… FastAPI endpoints (/retrieve, /query, /stats)
-- âœ… Health checks with retriever status
+- âœ?HybridRetriever (BM25 + dense placeholder)
+- âœ?Reciprocal Rank Fusion
+- âœ?FastAPI endpoints (/retrieve, /query, /stats)
+- âœ?Health checks with retriever status
 
 ### Next Steps (Future Development)
 
@@ -197,7 +197,7 @@ Based on 2025-2026 best practices:
 
 ### Step 2 Complete: Repo Rename Proposal
 - **Created:** `RENAME_PROPOSAL.md` with:
-  - Analysis of current name (`cm-expert-llm`) limitations
+  - Analysis of current name (`CondensAI`) limitations
   - Top 5 name shortlist with pros/cons:
     1. **CondensAI** (recommended)
     2. MatterLLM

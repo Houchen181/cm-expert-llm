@@ -1,27 +1,27 @@
-# CM-Expert-LLM
+# CondensAI
 
 <div align="center">
-  <img src="docs/logo.svg" alt="CM-Expert-LLM Logo" width="200"/>
+  <img src="docs/logo.svg" alt="CondensAI Logo" width="200"/>
   <br>
   <strong>Build Domain-Expert LLMs for Condensed Matter Physics</strong>
 </div>
 
 <p align="center">
-  <a href="https://github.com/Houchen181/cm-expert-llm/stargazers">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Houchen181/cm-expert-llm?style=flat"/>
+  <a href="https://github.com/Houchen181/CondensAI/stargazers">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Houchen181/CondensAI?style=flat"/>
   </a>
-  <a href="https://github.com/Houchen181/cm-expert-llm/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/Houchen181/cm-expert-llm"/>
+  <a href="https://github.com/Houchen181/CondensAI/issues">
+    <img alt="Issues" src="https://img.shields.io/github/issues/Houchen181/CondensAI"/>
   </a>
-  <a href="https://github.com/Houchen181/cm-expert-llm/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/Houchen181/cm-expert-llm"/>
+  <a href="https://github.com/Houchen181/CondensAI/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/Houchen181/CondensAI"/>
   </a>
   <a href="https://arxiv.org/abs/2508.18124">
     <img alt="CMPhysBench" src="https://img.shields.io/badge/CMPhysBench-evaluation-blue"/>
   </a>
 </p>
 
-**CM-Expert-LLM** is an open-source toolkit for building **domain-expert LLM assistants** specialized in condensed matter physics. Turn your research papers, textbooks, and lecture notes into an intelligent, retrieval-augmented Q&A system that actually understands physics.
+**CondensAI** is an open-source toolkit for building **domain-expert LLM assistants** specialized in condensed matter physics. Turn your research papers, textbooks, and lecture notes into an intelligent, retrieval-augmented Q&A system that actually understands physics.
 
 > **Why this exists:** Most physicists shouldn't need to be ML engineers. This project lets you deploy a custom LLM trained on *your* research area—without requiring a team of AI experts.
 
@@ -41,8 +41,8 @@
 
 ### 1. Install
 ```bash
-git clone https://github.com/Houchen181/cm-expert-llm.git
-cd cm-expert-llm
+git clone https://github.com/Houchen181/CondensAI.git
+cd CondensAI
 pip install -r requirements.txt
 ```
 
@@ -96,29 +96,29 @@ Access the interactive API docs at `http://localhost:8080/docs`
 ## 🔬 Key Features
 
 ### Data Pipeline
-- ✅ Automatic chunking with configurable size/overlap
-- ✅ Metadata extraction (source, type, char count)
-- ✅ JSONL output format for HuggingFace compatibility
-- ✅ Supports `.txt`, `.md`, `.tex` files
+- �?Automatic chunking with configurable size/overlap
+- �?Metadata extraction (source, type, char count)
+- �?JSONL output format for HuggingFace compatibility
+- �?Supports `.txt`, `.md`, `.tex` files
 
 ### Training
-- ✅ LoRA fine-tuning (r=32, alpha=64, target_modules=[q,v,k,o]_proj)
-- ✅ Optional DAPT (Domain Adaptive Pre-Training) stage
-- ✅ YAML-based configuration
-- ✅ Dry-run mode for safe validation
-- ✅ GPU detection and graceful degradation
+- �?LoRA fine-tuning (r=32, alpha=64, target_modules=[q,v,k,o]_proj)
+- �?Optional DAPT (Domain Adaptive Pre-Training) stage
+- �?YAML-based configuration
+- �?Dry-run mode for safe validation
+- �?GPU detection and graceful degradation
 
 ### Evaluation
-- ✅ CMPhysBench benchmark (5 sample questions included)
-- ✅ Grounding evaluation (hallucination detection)
-- ✅ Citation accuracy metrics
-- ✅ By-difficulty and by-topic breakdowns
+- �?CMPhysBench benchmark (5 sample questions included)
+- �?Grounding evaluation (hallucination detection)
+- �?Citation accuracy metrics
+- �?By-difficulty and by-topic breakdowns
 
 ### Serving
-- ✅ HybridRetriever (BM25 + dense placeholder)
-- ✅ Reciprocal Rank Fusion for combining rankings
-- ✅ FastAPI endpoints (`/retrieve`, `/query`, `/stats`, `/health`)
-- ✅ Health checks with retriever status
+- �?HybridRetriever (BM25 + dense placeholder)
+- �?Reciprocal Rank Fusion for combining rankings
+- �?FastAPI endpoints (`/retrieve`, `/query`, `/stats`, `/health`)
+- �?Health checks with retriever status
 
 ---
 
@@ -135,21 +135,21 @@ This project incorporates insights from cutting-edge work in scientific AI:
 
 ---
 
-## 🏗️ Project Structure
+## 🏗�?Project Structure
 
 ```
-cm-expert-llm/
+CondensAI/
 ├── src/cmp_expert/
-│   ├── data/            # Data ingestion pipeline
-│   ├── training/        # LoRA training with DAPT support
-│   ├── eval/            # CMPhysBench + Grounding evaluation
-│   └── serve/           # RAG API (FastAPI)
+�?  ├── data/            # Data ingestion pipeline
+�?  ├── training/        # LoRA training with DAPT support
+�?  ├── eval/            # CMPhysBench + Grounding evaluation
+�?  └── serve/           # RAG API (FastAPI)
 ├── configs/             # YAML configurations
 ├── scripts/             # CLI tools
 ├── data/raw/            # Sample physics content
-│   ├── superconductivity/
-│   ├── topology/
-│   └── correlated/
+�?  ├── superconductivity/
+�?  ├── topology/
+�?  └── correlated/
 ├── examples/            # Interactive tutorials (Jupyter)
 ├── docs/                # Documentation + logo
 └── tests/               # Unit tests
@@ -170,7 +170,7 @@ Ingest experimental procedures and troubleshooting guides. Lab members ask: *"Wh
 
 ---
 
-## 🛠️ Configuration
+## 🛠�?Configuration
 
 ### Training Config (`configs/train.default.yaml`)
 ```yaml
@@ -194,8 +194,7 @@ training:
 
 ## 📈 Roadmap
 
-### Completed ✅
-- [x] Data ingestion pipeline
+### Completed �?- [x] Data ingestion pipeline
 - [x] LoRA training with DAPT support
 - [x] CMPhysBench evaluation
 - [x] Hybrid RAG serving layer
@@ -240,8 +239,8 @@ Apache License 2.0 - See [LICENSE](LICENSE) for details.
 
 ## 📬 Contact
 
-- **Issues:** [GitHub Issues](https://github.com/Houchen181/cm-expert-llm/issues)
-- **Repository:** https://github.com/Houchen181/cm-expert-llm
+- **Issues:** [GitHub Issues](https://github.com/Houchen181/CondensAI/issues)
+- **Repository:** https://github.com/Houchen181/CondensAI
 
 ---
 

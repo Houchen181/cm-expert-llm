@@ -1,4 +1,4 @@
-# Contributing to CM-Expert-LLM
+# Contributing to CondensAI
 
 Thank you for your interest in contributing! This project aims to build domain-expert LLMs for condensed matter physics.
 
@@ -18,8 +18,8 @@ Thank you for your interest in contributing! This project aims to build domain-e
 
 ### Development Setup
 ```bash
-git clone https://github.com/YOUR_USERNAME/cm-expert-llm.git
-cd cm-expert-llm
+git clone https://github.com/YOUR_USERNAME/CondensAI.git
+cd CondensAI
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
