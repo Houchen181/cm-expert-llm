@@ -305,3 +305,30 @@ Make the project immediately understandable and appealing to condensed matter ph
 ---
 *Updated: 2026-03-16 05:08 EDT*
 
+
+## 2026-03-18 12:18 EDT - Heartbeat Run (Proactive pass while GitHub remote is pending)
+
+**What I did this run**:
+- Verified blocker status: `origin` (`https://github.com/Houchen181/CondensAI.git`) still not created yet, so push is blocked.
+- Continued quality work locally instead of waiting idle.
+- Pulled fresh ecosystem signal via direct `web_fetch` (Brave key unavailable in runtime):
+  - arXiv cs.CL recent list (2026-03-18)
+  - arXiv cs.LG recent list (2026-03-18)
+  - vLLM docs (latest front-page capabilities)
+- Confirmed inference stack messaging remains up-to-date for docs/positioning:
+  - PagedAttention / continuous batching
+  - OpenAI-compatible serving
+  - quantization + multi-LoRA support
+
+**Infra note**:
+- Search backend in this runtime currently lacks `BRAVE_API_KEY`; used `web_fetch` from trusted direct sources instead (as fallback).
+
+**Next 5 steps**:
+1. Add a short `docs/STACK_DECISIONS.md` clarifying recommended serving/training stack (vLLM + PEFT/LoRA + retrieval).
+2. Add reproducible benchmark template (`docs/BENCHMARK_PROTOCOL.md`) for CMPhysBench + citation-grounded eval.
+3. Add `examples/04_eval_report_template.ipynb` for publishable result tables/plots.
+4. Once repo is created, push all queued commits and open first 5 issues as onboarding tasks.
+5. Enable GitHub Discussions + add ¡°Good First Issue¡± labels and contributor starter board.
+
+---
+*Updated: 2026-03-18 12:18 EDT*
