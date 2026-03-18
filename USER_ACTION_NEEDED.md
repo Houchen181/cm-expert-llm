@@ -1,46 +1,60 @@
-# User Action Required
+# User Action Required: Create CondensAI GitHub Repository
 
-## Repository Rename Needed
+## What needs to be done
 
-The current name `CondensAI` is not catchy enough. Here are better alternatives:
+The local repository has been renamed to **CondensAI** and is ready to push, but the remote GitHub repository needs to be created first.
 
-### Suggested Names:
+## Steps
 
-1. **PhysAI** / **PhysicAI** - Simple, memorable
-2. **CondensAI** - Condensed matter + AI
-3. **QuantumMind** - Evokes quantum physics + intelligence  
-4. **MatterLLM** - Direct and clear
-5. **PhysicLLM** - Physics + LLM
-6. **CondensedAI** - Condensed matter AI
-7. **SolidStateAI** - Solid state physics focus
-8. **PhysicsGPT** - Like GPT for physics
-9. **MatterGPT** - GPT for matter physics
-10. **Quark** - Short, physics-related, memorable
+### 1. Create GitHub Repository
+Go to: https://github.com/new
 
-### Recommendation:
+**Settings:**
+- **Repository name**: `CondensAI`
+- **Description**: "Domain-expert LLM toolkit for condensed matter physics - Build your own physics expert with research papers and textbooks"
+- **Visibility**: Public (for 1k star goal)
+- **Initialize with**: 
+  - [ ] ~~Add a README file~~ (leave unchecked - we have existing content)
+  - [ ] ~~Add .gitignore~~ (leave unchecked - we have existing .gitignore)
+  - [ ] ~~Choose a license~~ (leave unchecked - we have LICENSE file)
 
-**CondensAI** or **MatterLLM** - Both are:
-- Short and memorable
-- Clearly indicate the domain (condensed matter)
-- Include AI/LLM aspect
-- Easy to spell and search
-- Available on GitHub (need to verify)
+### 2. Copy the Repository URL
+After creation, copy the URL (should be):
+```
+https://github.com/Houchen181/CondensAI.git
+```
 
-## Action Items for User:
+### 3. Push Local Changes
+Run these commands in the repository root:
 
-1. [ ] Choose a new name from the list above
-2. [ ] Check GitHub availability
-3. [ ] Rename repository on GitHub
-4. [ ] Update local remote URL
-5. [ ] Update all references in documentation
+```powershell
+cd C:\Users\xu\.openclaw\workspace\llm_physics_project
 
-## Next Steps After Rename:
+# Set remote to new repo
+git remote set-url origin https://github.com/Houchen181/CondensAI.git
 
-- Update README badges
-- Update all internal references
-- Update logo text
-- Update package names if needed
+# Push main branch
+git push -u origin main
+```
+
+### 4. Verify on GitHub
+- Check that all files appear on GitHub
+- Verify CI workflow is detected (should show Actions tab)
+- Check that LICENSE is detected
+
+## After Push - Next Steps
+
+Once pushed, I will immediately:
+1. Add GitHub Actions CI badge to README
+2. Add Colab badge to demo notebook  
+3. Create Discord community server link
+4. Add GitHub Discussions enablement instructions
+5. Create issue templates for community contributions
+
+## Alternative: Let me know when ready
+If you prefer, just create the repo and tell me when it's done - I can provide the exact push commands once the repo exists.
 
 ---
 
-Please choose a name and let me know, then I'll update all references throughout the project.
+**Status**: ✅ Local commits ready (2 commits ahead)  
+**Awaiting**: GitHub repo creation by user
