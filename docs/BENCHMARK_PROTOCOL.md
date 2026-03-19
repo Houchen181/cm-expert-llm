@@ -1,6 +1,6 @@
 # Benchmark Protocol - CMPhysBench
 
-This document describes the evaluation protocol for CondensAI using CMPhysBench (Condensed Matter Physics Benchmark).
+This document describes the evaluation protocol for cm-expert-llm using CMPhysBench (Condensed Matter Physics Benchmark).
 
 ## Overview
 
@@ -169,7 +169,7 @@ python scripts/generate_report.py --input results.json --output report.pdf
 |-------|--------|----------|-------------|-----|
 | GPT-4 | 85% | 65% | 0.45 | 0.25 |
 | Claude-3 | 87% | 68% | 0.48 | 0.22 |
-| **CondensAI (target)** | **92%** | **78%** | **0.75** | **0.10** |
+| **cm-expert-llm (target)** | **92%** | **78%** | **0.75** | **0.10** |
 
 ## Submission Guidelines
 
@@ -187,7 +187,7 @@ If you use CMPhysBench in your research:
 ```bibtex
 @misc{cmphysbench2026,
   title={CMPhysBench: A Benchmark for Domain-Expert LLMs in Condensed Matter Physics},
-  author={CondensAI Team},
+  author={cm-expert-llm Team},
   year={2026},
   url={https://github.com/Houchen181/cm-expert-llm}
 }

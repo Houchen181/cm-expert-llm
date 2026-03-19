@@ -34,4 +34,4 @@ This directory contains excerpts and notes from **original research papers and t
 ## Notes
 - All excerpts should be properly cited
 - Direct quotes must be marked
-- This is training data for CondensAI - accuracy is critical
+- This is training data for cm-expert-llm - accuracy is critical

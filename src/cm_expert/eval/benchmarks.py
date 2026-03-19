@@ -1,5 +1,5 @@
 """
-Benchmark Evaluations for CondensAI.
+Benchmark Evaluations for cm-expert-llm.
 
 Implements evaluation metrics for condensed matter physics LLM assessment:
 - CMPhysBench-style: Domain knowledge, problem-solving, reasoning
@@ -287,7 +287,7 @@ class CMPBenchmark:
 def main():
     """Run benchmark evaluation."""
     import argparse
-    parser = argparse.ArgumentParser(description='Run CondensAI benchmark')
+    parser = argparse.ArgumentParser(description='Run cm-expert-llm benchmark')
     parser.add_argument('--benchmark-file', type=str, help='Custom benchmark file')
     parser.add_argument('--save', action='store_true', help='Save results')
     args = parser.parse_args()

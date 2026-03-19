@@ -4,7 +4,7 @@
 All heartbeat tasks are **COMPLETE** except renaming the repository, which requires your decision.
 
 ## Current State
-- **Repo:** https://github.com/Houchen181/CondensAI
+- **Repo:** https://github.com/Houchen181/cm-expert-llm
 - **All code:** âœ?Implemented, tested, pushed
 - **Documentation:** âœ?Complete
 - **Logo:** âœ?High-contrast version
@@ -16,16 +16,16 @@ All heartbeat tasks are **COMPLETE** except renaming the repository, which requi
 
 | Name | Why It's Good |
 |------|---------------|
-| **CondensAI** â­?| Best brand, clear condensed matter + AI connection |
+| **cm-expert-llm** â­?| Best brand, clear condensed matter + AI connection |
 | MatterLLM | Direct, clear LLM focus |
 | PhysicLLM | Physics + LLM, broader scope |
 | SolidStateAI | Solid-state physics focus |
 | QuarkLLM | Short, memorable (but particle physics, not CM) |
 
-**My recommendation:** **CondensAI**
+**My recommendation:** **cm-expert-llm**
 
 ## Action Required
-1. Check if "CondensAI" (or your preferred choice) is available on GitHub
+1. Check if "cm-expert-llm" (or your preferred choice) is available on GitHub
 2. Reply with chosen name
 3. I will execute the full migration checklist automatically
 

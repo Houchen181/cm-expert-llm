@@ -59,7 +59,7 @@
 - [ ] Create git tag: `v0.1.0`
 - [ ] Push tag to GitHub
 - [ ] Create GitHub Release with notes
-- [ ] Publish to PyPI: `pip install condensai`
+- [ ] Publish to PyPI: `pip install cm-expert-llm`
 - [ ] Push Docker image (if applicable)
 
 ### Announcement (12:00 PM EST)
@@ -112,9 +112,9 @@
 ## Release Notes Template
 
 ```markdown
-## CondensAI v0.1.0 - Initial Release
+## cm-expert-llm v0.1.0 - Initial Release
 
-🎉 We're excited to announce the first release of CondensAI!
+🎉 We're excited to announce the first release of cm-expert-llm!
 
 ### What's New
 - Core RAG pipeline for physics Q&A
@@ -125,7 +125,7 @@
 
 ### Installation
 ```bash
-pip install condensai
+pip install cm-expert-llm
 ```
 
 ### Quick Start

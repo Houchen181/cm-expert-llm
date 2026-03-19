@@ -14,7 +14,7 @@ This directory contains excerpts and notes from **original research papers and t
    - Discovery of fractional quantum Hall effect
 
 ### Topological Insulators
-3. **Kane, C. L., & Mele, E. J. (2005).** "Zâ‚‚ Topological Order and the Quantum Spin Hall Effect." *Physical Review Letters*, 95(14), 146802.
+3. **Kane, C. L., & Mele, E. J. (2005).** "Zâ‚?Topological Order and the Quantum Spin Hall Effect." *Physical Review Letters*, 95(14), 146802.
    - DOI: [10.1103/PhysRevLett.95.146802](https://doi.org/10.1103/PhysRevLett.95.146802)
    - Prediction of 2D topological insulators
 
@@ -43,4 +43,4 @@ This directory contains excerpts and notes from **original research papers and t
 ## Notes
 - All excerpts should be properly cited
 - Direct quotes must be marked
-- This is training data for CondensAI - accuracy is critical
+- This is training data for cm-expert-llm - accuracy is critical

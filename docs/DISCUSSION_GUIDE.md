@@ -1,6 +1,6 @@
 # GitHub Discussions Guide
 
-This guide helps seed and structure GitHub Discussions for CondensAI.
+This guide helps seed and structure GitHub Discussions for cm-expert-llm.
 
 ## Why Discussions Matter
 
@@ -39,11 +39,11 @@ Create these categories:
   - Off-topic physics chat
   - "What are you working on?"
 
-### 3. ❓ Q&A
+### 3. �?Q&A
 - **Purpose**: Ask for help
 - **Who can post**: Everyone
 - **Examples**:
-  - "How do I install CondensAI?"
+  - "How do I install cm-expert-llm?"
   - "Error: module not found"
   - "Best practices for X?"
 
@@ -59,7 +59,7 @@ Create these categories:
 - **Purpose**: Share what you built
 - **Who can post**: Everyone
 - **Examples**:
-  - "I deployed CondensAI for my research group"
+  - "I deployed cm-expert-llm for my research group"
   - "Here's my custom physics expert"
   - "Benchmark results on my dataset"
 
@@ -67,7 +67,7 @@ Create these categories:
 - **Purpose**: Community tutorials and guides
 - **Who can post**: Everyone
 - **Examples**:
-  - "How I used CondensAI for teaching"
+  - "How I used cm-expert-llm for teaching"
   - "Custom dataset preparation guide"
   - "Integration with other tools"
 
@@ -76,10 +76,10 @@ Create these categories:
 ### Welcome Post (Pin this!)
 
 ```markdown
-# Welcome to CondensAI Discussions! 🦀
+# Welcome to cm-expert-llm Discussions! 🦀
 
 This is the place to:
-- Ask questions about using CondensAI
+- Ask questions about using cm-expert-llm
 - Suggest new features
 - Share what you've built
 - Connect with other physics researchers
@@ -101,9 +101,9 @@ Introduce yourself below! 👇
 ### First Question Template
 
 ```markdown
-# [Q&A] How to get started with CondensAI?
+# [Q&A] How to get started with cm-expert-llm?
 
-**Question**: I'm new to CondensAI and want to deploy my own physics expert. Where should I start?
+**Question**: I'm new to cm-expert-llm and want to deploy my own physics expert. Where should I start?
 
 **Context**: 
 - My background: [e.g., PhD student in condensed matter physics]
@@ -127,7 +127,7 @@ Introduce yourself below! 👇
 - **Be specific**: Provide context and examples
 - **Search first**: Your question may already be answered
 
-## Discussion → Issue Conversion
+## Discussion �?Issue Conversion
 
 When a discussion reveals a bug or clear feature request:
 
@@ -142,7 +142,7 @@ When a discussion reveals a bug or clear feature request:
 - **Active participants**: Target 20+ unique users
 - **Resolution rate**: % of Q&A marked as answered
 - **Response time**: Average time to first reply
-- **Conversion rate**: Discussions → Issues → PRs
+- **Conversion rate**: Discussions �?Issues �?PRs
 
 ## Promotion
 

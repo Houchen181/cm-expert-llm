@@ -40,7 +40,7 @@
 2. `78d754a` - "Fix tests to match actual API - all 6 tests passing"
 3. `b8816e9` - "Update progress.md with 1k star improvements session"
 
-**All changes pushed to**: https://github.com/Houchen181/CondensAI
+**All changes pushed to**: https://github.com/Houchen181/cm-expert-llm
 
 ---
 
@@ -69,9 +69,9 @@
 ## User Action Needed
 
 **Repo Rename Decision** (see `RENAME_PROPOSAL.md`):
-- Option 1: **CondensAI** (recommended)
+- Option 1: **cm-expert-llm** (recommended)
 - Option 2: **MatterLLM**
-- Option 3: Keep **CondensAI**
+- Option 3: Keep **cm-expert-llm**
 
 Once decided, I'll execute the full migration checklist.
 

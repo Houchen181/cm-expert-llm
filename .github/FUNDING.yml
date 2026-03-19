@@ -1,9 +1,9 @@
-# Funding options for CondensAI (cm-expert-llm)
+# Funding options for cm-expert-llm (cm-expert-llm)
 # https://docs.github.com/en/articles/displaying-a-sponsor-button-in-your-repository
 
 github: []  # Add GitHub Sponsors username if available
 patreon:    # Add Patreon username
-open_collective: condensai  # Placeholder - create Open Collective when ready
+open_collective: cm-expert-llm  # Placeholder - create Open Collective when ready
 ko_fi:      # Add Ko-fi username
 tidelift:   # Add Tidelift package name
 community_bridge: # Add Community Bridge project name

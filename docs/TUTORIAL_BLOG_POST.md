@@ -1,4 +1,4 @@
-# Building a Physics Expert LLM in 10 Minutes: Domain-Specialization with CondensAI
+# Building a Physics Expert LLM in 10 Minutes: Domain-Specialization with cm-expert-llm
 
 *Originally published on [Medium/Towards Data Science] - [Date]*
 
@@ -10,7 +10,7 @@ Large language models are impressive, but they're generalists. Ask GPT-4 about c
 
 What if you could create an LLM that's an **expert** in your domain? Not just fine-tuned on generic text, but truly specialized with deep knowledge from research papers, textbooks, and domain-specific literature?
 
-In this tutorial, I'll show you how to build a domain-expert LLM for condensed matter physics in under 10 minutes using **CondensAI**—an open-source toolkit that combines retrieval-augmented generation (RAG) with parameter-efficient fine-tuning (LoRA).
+In this tutorial, I'll show you how to build a domain-expert LLM for condensed matter physics in under 10 minutes using **cm-expert-llm**—an open-source toolkit that combines retrieval-augmented generation (RAG) with parameter-efficient fine-tuning (LoRA).
 
 **What you'll build:** A physics expert that can answer questions about superconductivity, topology, and correlated electron systems with proper citations to primary literature.
 
@@ -36,7 +36,7 @@ Domain-specialized LLMs solve this by:
 Install dependencies:
 
 ```bash
-pip install condensai
+pip install cm-expert-llm
 ```
 
 That's it—CondensAI handles the complexity of transformers, PEFT, and FAISS under the hood.
@@ -48,16 +48,16 @@ First, gather your domain knowledge. For condensed matter physics, we organize b
 ```
 data/
 ├── raw/
-│   ├── superconductivity/
-│   │   ├── BCS_1957.txt
-│   │   ├── Tinkham_ch3.txt
-│   │   └── Bednorz_Muller_1986.txt
-│   ├── topology/
-│   │   ├── TKNN_1982.txt
-│   │   └── Kane_Mele_2005.txt
-│   └── correlated/
-│       ├── Mott_insulators.txt
-│       └── Hubbard_model.txt
+�?  ├── superconductivity/
+�?  �?  ├── BCS_1957.txt
+�?  �?  ├── Tinkham_ch3.txt
+�?  �?  └── Bednorz_Muller_1986.txt
+�?  ├── topology/
+�?  �?  ├── TKNN_1982.txt
+�?  �?  └── Kane_Mele_2005.txt
+�?  └── correlated/
+�?      ├── Mott_insulators.txt
+�?      └── Hubbard_model.txt
 ```
 
 Each file contains excerpts from real papers or textbooks. Here's an example from `BCS_1957.txt`:
@@ -95,7 +95,7 @@ training:
   learning_rate: 2e-4
 ```
 
-This config tells CondensAI to:
+This config tells cm-expert-llm to:
 - Use Llama-2-7B as the base model
 - Apply LoRA with r=16 for efficient fine-tuning
 - Quantize to 4-bit for memory efficiency
@@ -106,7 +106,7 @@ This config tells CondensAI to:
 With your data and config ready, training is a single command:
 
 ```python
-from condensai import train
+from cm-expert-llm import train
 
 train(config_path="configs/condensed_matter.yaml")
 ```
@@ -124,9 +124,9 @@ For a 7B model with LoRA, this takes ~2 hours on a single GPU. The output is a l
 Now for the fun part—asking questions:
 
 ```python
-from condensai import CondensAIExpert
+from cm-expert-llm import cm-expert-llmExpert
 
-expert = CondensAIExpert(
+expert = cm-expert-llmExpert(
     config_path="configs/condensed_matter.yaml",
     adapter_path="outputs/condensed_matter_adapter/"
 )
@@ -150,7 +150,7 @@ attracts another electron, overcoming Coulomb repulsion.
 
 Key points:
 - Phonon exchange creates effective attraction (Eliashberg theory)
-- Pairs form with opposite momentum and spin (k↑, -k↓)
+- Pairs form with opposite momentum and spin (k�? -k�?
 - Binding energy is ~meV scale (much smaller than eV Fermi energy)
 - Results in macroscopic quantum coherence (BCS ground state)
 
@@ -165,7 +165,7 @@ Notice the **citations**—you can verify every claim against primary sources.
 
 ## Step 5: Deploy and Share
 
-CondensAI includes a Streamlit UI for non-technical users:
+cm-expert-llm includes a Streamlit UI for non-technical users:
 
 ```bash
 streamlit run examples/05_streamlit_ui.py
@@ -177,7 +177,7 @@ This launches a chat interface where users can:
 - View citations with links to papers
 - Toggle between different subdomains
 
-For production deployment, CondensAI supports:
+For production deployment, cm-expert-llm supports:
 - **vLLM** for high-throughput serving
 - **Docker** containers
 - **FastAPI** endpoints with OpenAI-compatible API
@@ -190,26 +190,26 @@ Domain-specialized LLMs aren't just about better answers—they're about **trust
 2. **Understand limitations** (confidence scores help)
 3. **Explore further** (citations point you to more reading)
 
-CondensAI makes this accessible without requiring a team of ML engineers.
+cm-expert-llm makes this accessible without requiring a team of ML engineers.
 
 ## Try It Yourself
 
-The full codebase is open-source at [github.com/Houchen181/CondensAI](https://github.com/Houchen181/CondensAI).
+The full codebase is open-source at [github.com/Houchen181/cm-expert-llm](https://github.com/Houchen181/cm-expert-llm).
 
 **Quick start:**
 ```bash
-git clone https://github.com/Houchen181/CondensAI
-cd CondensAI
+git clone https://github.com/Houchen181/cm-expert-llm
+cd cm-expert-llm
 pip install -e .
 streamlit run examples/05_streamlit_ui.py
 ```
 
-Or try the [Google Colab demo](https://colab.research.google.com/github/Houchen181/CondensAI/blob/main/examples/03_demo.ipynb) for a one-click experience.
+Or try the [Google Colab demo](https://colab.research.google.com/github/Houchen181/cm-expert-llm/blob/main/examples/03_demo.ipynb) for a one-click experience.
 
 ## Next Steps
 
 - **Contribute physics content**: Add your subfield to the data repository
-- **Benchmark**: Test CondensAI on CMPhysBench and submit results
+- **Benchmark**: Test cm-expert-llm on CMPhysBench and submit results
 - **Extend**: Add support for equations, figures, or code
 - **Deploy**: Share your own domain expert
 
@@ -217,7 +217,7 @@ The future of LLMs isn't bigger general models—it's **smarter specialized ones
 
 ---
 
-*About the author: [Your bio]. CondensAI is an open-source project aiming to democratize domain expertise in LLMs. Contributions welcome!*
+*About the author: [Your bio]. cm-expert-llm is an open-source project aiming to democratize domain expertise in LLMs. Contributions welcome!*
 
 **Acknowledgments**: Thanks to the Hugging Face, FAISS, and sentence-transformers teams for making this possible.
 
@@ -236,9 +236,9 @@ The future of LLMs isn't bigger general models—it's **smarter specialized ones
 |-------|------------------|--------------------|------------------------|
 | GPT-4 | 72% | 58% | 41% |
 | Claude-3 | 74% | 61% | 43% |
-| CondensAI (Ours) | **89%** | **78%** | **67%** |
+| cm-expert-llm (Ours) | **89%** | **78%** | **67%** |
 
-*Table: CondensAI outperforms general LLMs on domain-specific physics questions while providing citations.*
+*Table: cm-expert-llm outperforms general LLMs on domain-specific physics questions while providing citations.*
 
 ### Hardware Requirements
 | Task | GPU Memory | Time |
@@ -249,4 +249,4 @@ The future of LLMs isn't bigger general models—it's **smarter specialized ones
 
 ---
 
-*This tutorial is based on CondensAI v0.1.0. For the latest version, check the [documentation](https://github.com/Houchen181/CondensAI/tree/main/docs).*
+*This tutorial is based on cm-expert-llm v0.1.0. For the latest version, check the [documentation](https://github.com/Houchen181/cm-expert-llm/tree/main/docs).*

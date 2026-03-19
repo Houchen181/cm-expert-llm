@@ -1,6 +1,6 @@
-# CondensAI Project Roadmap
+# cm-expert-llm Project Roadmap
 
-This document outlines the development roadmap for CondensAI (cm-expert-llm), a domain-expert LLM toolkit for condensed matter physics.
+This document outlines the development roadmap for cm-expert-llm (cm-expert-llm), a domain-expert LLM toolkit for condensed matter physics.
 
 ## Vision
 
@@ -14,7 +14,7 @@ Enable physicists to deploy custom LLM assistants trained on their research pape
 
 ## Q2 2026 (April - June)
 
-### âœ… Completed (March 2026)
+### âœ?Completed (March 2026)
 - [x] Core RAG pipeline (data ingestion, retrieval, generation)
 - [x] LoRA fine-tuning support
 - [x] Basic evaluation framework (CMPhysBench)
@@ -41,7 +41,7 @@ Enable physicists to deploy custom LLM assistants trained on their research pape
 
 - [ ] **Cross-Encoder Reranking**
   - [ ] Add `cross-encoder` dependency
-  - [ ] Rerank top-50 â†’ top-5 results
+  - [ ] Rerank top-50 â†?top-5 results
   - [ ] Evaluate impact on CMPhysBench
 
 - [ ] **UI Improvements**

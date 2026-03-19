@@ -18,7 +18,7 @@ This directory contains excerpts and notes from **original research papers and t
    - Superexchange in Mott systems
 
 ### High-Tc Superconductors
-4. **Anderson, P. W. (1987).** "The Resonating Valence Bond State in La₂CuO₄ and Superconductivity." *Science*, 235(4792), 1196-1198.
+4. **Anderson, P. W. (1987).** "The Resonating Valence Bond State in La₂CuO�?and Superconductivity." *Science*, 235(4792), 1196-1198.
    - DOI: [10.1126/science.235.4792.1196](https://doi.org/10.1126/science.235.4792.1196)
    - RVB theory of high-Tc superconductivity
 
@@ -43,4 +43,4 @@ This directory contains excerpts and notes from **original research papers and t
 ## Notes
 - All excerpts should be properly cited
 - Direct quotes must be marked
-- This is training data for CondensAI - accuracy is critical
+- This is training data for cm-expert-llm - accuracy is critical

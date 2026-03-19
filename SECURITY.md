@@ -18,4 +18,4 @@ We take security seriously. Please report vulnerabilities by emailing [security@
 - Initial response: Within 48 hours
 - Status update: Within 5 business days
 
-Thank you for helping keep CondensAI secure!
+Thank you for helping keep cm-expert-llm secure!

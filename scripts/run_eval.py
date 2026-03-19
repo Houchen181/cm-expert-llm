@@ -1,4 +1,4 @@
-from condensai.eval.run_eval import main
+from cm-expert-llm.eval.run_eval import main
 
 if __name__ == '__main__':
     main()

@@ -1,5 +1,5 @@
 """
-Data Ingestion Pipeline for CondensAI.
+Data Ingestion Pipeline for cm-expert-llm.
 
 Ingests raw text/markdown/PDF files from `data/raw`, chunks them, and outputs
 a normalized JSONL file for training/evaluation.
@@ -84,7 +84,7 @@ def process_directory(input_dir: Path, output_file: Path, chunk_size: int, overl
     print(f"Ingestion complete. Total chunks written: {total_chunks} to {output_file}")
 
 def main():
-    parser = argparse.ArgumentParser(description='Ingest raw data for CondensAI')
+    parser = argparse.ArgumentParser(description='Ingest raw data for cm-expert-llm')
     parser.add_argument('--input-dir', type=str, default='./data/raw', help='Input directory')
     parser.add_argument('--output-file', type=str, default='./data/processed/sft.jsonl', help='Output JSONL file')
     parser.add_argument('--chunk-size', type=int, default=800, help='Chunk size (words)')

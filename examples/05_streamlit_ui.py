@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Streamlit UI for CondensAI - Physics Expert LLM Interface
+Streamlit UI for cm-expert-llm - Physics Expert LLM Interface
 
-A simple, user-friendly interface for querying your CondensAI physics expert.
+A simple, user-friendly interface for querying your cm-expert-llm physics expert.
 Perfect for non-technical users who want to interact with the model without coding.
 
 ## Usage
@@ -35,7 +35,7 @@ from pathlib import Path
 
 # Page configuration
 st.set_page_config(
-    page_title="CondensAI - Physics Expert",
+    page_title="cm-expert-llm - Physics Expert",
     page_icon="🦀",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -78,7 +78,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.markdown('<div class="main-header">🦀 CondensAI</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">🦀 cm-expert-llm</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Domain-Expert LLM for Condensed Matter Physics</div>', unsafe_allow_html=True)
 
 # Sidebar configuration
@@ -89,7 +89,7 @@ with st.sidebar:
     api_url = st.text_input(
         "API URL",
         value="http://localhost:8000",
-        help="Your CondensAI API server URL"
+        help="Your cm-expert-llm API server URL"
     )
     
     # Model selection
@@ -132,7 +132,7 @@ with st.sidebar:
     st.divider()
     
     # Clear history button
-    if st.button("🗑️ Clear History"):
+    if st.button("🗑�?Clear History"):
         st.session_state.messages = []
         st.rerun()
 
@@ -211,16 +211,16 @@ if prompt := st.chat_input("Ask a physics question..."):
                     "citations": citations
                 })
             else:
-                error_msg = f"❌ Error: API returned status {response.status_code}"
+                error_msg = f"�?Error: API returned status {response.status_code}"
                 message_placeholder.markdown(error_msg)
                 st.session_state.messages.append({"role": "assistant", "content": error_msg})
                 
         except requests.exceptions.ConnectionError:
-            error_msg = "❌ Cannot connect to API server. Make sure it's running at: `python scripts/serve_api.py`"
+            error_msg = "�?Cannot connect to API server. Make sure it's running at: `python scripts/serve_api.py`"
             message_placeholder.markdown(error_msg)
             st.session_state.messages.append({"role": "assistant", "content": error_msg})
         except Exception as e:
-            error_msg = f"❌ Error: {str(e)}"
+            error_msg = f"�?Error: {str(e)}"
             message_placeholder.markdown(error_msg)
             st.session_state.messages.append({"role": "assistant", "content": error_msg})
 
@@ -228,7 +228,7 @@ if prompt := st.chat_input("Ask a physics question..."):
 st.divider()
 st.markdown("""
 <div style="text-align: center; color: #7f8c8d; font-size: 0.9rem;">
-  <p>Powered by <a href="https://github.com/Houchen181/cm-expert-llm">CondensAI</a> | 
+  <p>Powered by <a href="https://github.com/Houchen181/cm-expert-llm">cm-expert-llm</a> | 
      Specialized in condensed matter physics</p>
 </div>
 """, unsafe_allow_html=True)

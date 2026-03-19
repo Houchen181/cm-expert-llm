@@ -1,8 +1,8 @@
-# User Action Required: Create CondensAI GitHub Repository
+# User Action Required: Create cm-expert-llm GitHub Repository
 
 ## What needs to be done
 
-The local repository has been renamed to **CondensAI** and is ready to push, but the remote GitHub repository needs to be created first.
+The local repository has been renamed to **cm-expert-llm** and is ready to push, but the remote GitHub repository needs to be created first.
 
 ## Steps
 
@@ -10,7 +10,7 @@ The local repository has been renamed to **CondensAI** and is ready to push, but
 Go to: https://github.com/new
 
 **Settings:**
-- **Repository name**: `CondensAI`
+- **Repository name**: `cm-expert-llm`
 - **Description**: "Domain-expert LLM toolkit for condensed matter physics - Build your own physics expert with research papers and textbooks"
 - **Visibility**: Public (for 1k star goal)
 - **Initialize with**: 
@@ -21,7 +21,7 @@ Go to: https://github.com/new
 ### 2. Copy the Repository URL
 After creation, copy the URL (should be):
 ```
-https://github.com/Houchen181/CondensAI.git
+https://github.com/Houchen181/cm-expert-llm.git
 ```
 
 ### 3. Push Local Changes
@@ -31,7 +31,7 @@ Run these commands in the repository root:
 cd C:\Users\xu\.openclaw\workspace\llm_physics_project
 
 # Set remote to new repo
-git remote set-url origin https://github.com/Houchen181/CondensAI.git
+git remote set-url origin https://github.com/Houchen181/cm-expert-llm.git
 
 # Push main branch
 git push -u origin main
@@ -56,5 +56,5 @@ If you prefer, just create the repo and tell me when it's done - I can provide t
 
 ---
 
-**Status**: âœ… Local commits ready (2 commits ahead)  
+**Status**: âœ?Local commits ready (2 commits ahead)  
 **Awaiting**: GitHub repo creation by user

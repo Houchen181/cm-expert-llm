@@ -26,7 +26,7 @@ Paste error messages or logs here
 **Environment**
 - OS: [e.g. Windows 11, Ubuntu 22.04, macOS 14]
 - Python version: [e.g. 3.11]
-- CondensAI version: [e.g. 0.1.0 or commit hash]
+- cm-expert-llm version: [e.g. 0.1.0 or commit hash]
 - GPU (if applicable): [e.g. RTX 4090, A100]
 
 **Additional context**

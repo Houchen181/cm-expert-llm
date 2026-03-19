@@ -1,26 +1,26 @@
-# Progress Log - CondensAI
+# Progress Log - cm-expert-llm
 
-## 2026-03-16 18:02 EDT - CondensAI Rebrand + Real Data
+## 2026-03-16 18:02 EDT - cm-expert-llm Rebrand + Real Data
 
 **Completed:**
-- âœ… Renamed project from `cm-expert-llm` to **CondensAI**
+- âœ?Renamed project from `cm-expert-llm` to **cm-expert-llm**
   - Updated all references in docs, configs, scripts, tests
-  - Renamed package: `cmp_expert` â†’ `condensai`
+  - Renamed package: `cmp_expert` â†?`cm-expert-llm`
   - Committed locally (awaiting remote repo creation)
-- âœ… Replaced AI summaries with **real paper references**:
+- âœ?Replaced AI summaries with **real paper references**:
   - `data/raw/superconductivity/README.md` - BCS papers, high-Tc discoveries, textbooks
   - `data/raw/topology/README.md` - QHE, TI, Weyl papers
   - `data/raw/correlated/README.md` - Mott, Hubbard, heavy fermion papers
-- âœ… Removed AI-generated summary files (`01_*.md`)
+- âœ?Removed AI-generated summary files (`01_*.md`)
 
 **Why This Matters:**
 1. **Authenticity**: Training on original papers, not AI summaries
 2. **Citations**: Proper DOI links to primary sources
 3. **Credibility**: Researchers can verify sources
-4. **Brand clarity**: CondensAI is memorable and domain-specific
+4. **Brand clarity**: cm-expert-llm is memorable and domain-specific
 
 **Next 5 Steps:**
-1. Create GitHub repo `CondensAI` and push
+1. Create GitHub repo `cm-expert-llm` and push
 2. Add GitHub Actions CI badge to README
 3. Add Colab badge to demo notebook
 4. Create Discord community server
@@ -39,7 +39,7 @@
 
 ### Next implementation targets (queued)
 1. Replace training notebook placeholder with executable trainer flow (with safe dry-run mode).
-2. Rename repo branding from `CondensAI` to a stronger name (proposal + migration checklist).
+2. Rename repo branding from `cm-expert-llm` to a stronger name (proposal + migration checklist).
 3. Upgrade logo readability (high-contrast SVG + favicon variants).
 4. Fill any remaining script skeletons with real operational code paths.
 
@@ -61,7 +61,7 @@
   - Created `USER_ACTION_REQUIRED.md` for manual repo creation
 
 - **18:37 PM**: **BLOCKER RESOLVED** - User provided repo URL
-  - Successfully pushed initial scaffold to https://github.com/Houchen181/CondensAI
+  - Successfully pushed initial scaffold to https://github.com/Houchen181/cm-expert-llm
 
 - **18:38 PM**: **Step 3 Complete** - Data ingestion pipeline
   - `src/cmp_expert/data/pipeline.py`: Chunking, metadata extraction, JSONL output
@@ -78,50 +78,50 @@
   - Committed and pushed
 
 - **Current Session**: Complete remaining implementation
-  - ï¿½?**HybridRetriever** implemented (`src/cmp_expert/serve/retriever.py`)
+  - ï¿?**HybridRetriever** implemented (`src/cmp_expert/serve/retriever.py`)
     - BM25 keyword-based retrieval
     - Dense vector retrieval (placeholder for sentence transformers)
     - Reciprocal Rank Fusion (RRF) for combining rankings
     - Configurable parameters (k1, b, k)
   
-  - ï¿½?**Complete RAG API** (`src/cmp_expert/serve/api.py`)
+  - ï¿?**Complete RAG API** (`src/cmp_expert/serve/api.py`)
     - `/health` - Health check with retriever status
     - `/retrieve` - Hybrid retrieval endpoint
     - `/query` - RAG-based question answering
     - `/stats` - System statistics
   
-  - ï¿½?**Evaluation Suite** completed
+  - ï¿?**Evaluation Suite** completed
     - `benchmarks.py`: CMPhysBench implementation with 5 sample questions
     - `grounding.py`: Hallucination detection, citation accuracy
     - `run_eval.py`: Unified evaluation runner
   
-  - ï¿½?**Example Notebooks** created
+  - ï¿?**Example Notebooks** created
     - `01_data_ingestion.ipynb`: Interactive data pipeline tutorial
     - `02_training.ipynb`: LoRA training walkthrough
   
-  - ï¿½?**Documentation** enhanced
+  - ï¿?**Documentation** enhanced
     - `docs/QUICKSTART.md`: Complete 5-minute setup guide
     - Updated all script docstrings
   
-  - ï¿½?**Scripts** updated
+  - ï¿?**Scripts** updated
     - `serve_api.py`: Config loading, proper FastAPI serving
     - `run_eval.py`: Benchmark + grounding evaluation
     - `train_lora.py`: Already complete
 
 ### Current Status
 
-ï¿½?**Step 1**: GitHub repository created: https://github.com/Houchen181/CondensAI  
-ï¿½?**Step 2**: Initial scaffold pushed  
-ï¿½?**Step 3**: Data ingestion pipeline implemented  
-ï¿½?**Step 4**: Training loop skeleton implemented (LoRA + DAPT support)  
-ï¿½?**Step 5**: Latest research integrated (hybrid RAG, DAPT, LoRA best practices)  
-ï¿½?**Step 6**: Evaluation suite complete (CMPhysBench + Grounding)  
-ï¿½?**Step 7**: RAG serving layer with hybrid retrieval  
-ï¿½?**Step 8**: Example notebooks and documentation  
+ï¿?**Step 1**: GitHub repository created: https://github.com/Houchen181/cm-expert-llm  
+ï¿?**Step 2**: Initial scaffold pushed  
+ï¿?**Step 3**: Data ingestion pipeline implemented  
+ï¿?**Step 4**: Training loop skeleton implemented (LoRA + DAPT support)  
+ï¿?**Step 5**: Latest research integrated (hybrid RAG, DAPT, LoRA best practices)  
+ï¿?**Step 6**: Evaluation suite complete (CMPhysBench + Grounding)  
+ï¿?**Step 7**: RAG serving layer with hybrid retrieval  
+ï¿?**Step 8**: Example notebooks and documentation  
 
 ### Repository Status
 
-- **Remote**: https://github.com/Houchen181/CondensAI
+- **Remote**: https://github.com/Houchen181/cm-expert-llm
 - **Latest Commit**: Implementation complete
 - **Branch**: `main`
 - **Files**: 20+ production files
@@ -129,28 +129,28 @@
 ### Features Implemented
 
 #### Data Pipeline
-- ï¿½?Text chunking with configurable size/overlap
-- ï¿½?Metadata extraction (source, type, char count)
-- ï¿½?JSONL output format
-- ï¿½?Support for .txt, .md, .tex files
+- ï¿?Text chunking with configurable size/overlap
+- ï¿?Metadata extraction (source, type, char count)
+- ï¿?JSONL output format
+- ï¿?Support for .txt, .md, .tex files
 
 #### Training
-- ï¿½?LoRA configuration loader
-- ï¿½?DAPT support (optional first stage)
-- ï¿½?YAML-based configuration
-- ï¿½?Placeholder for HuggingFace integration
+- ï¿?LoRA configuration loader
+- ï¿?DAPT support (optional first stage)
+- ï¿?YAML-based configuration
+- ï¿?Placeholder for HuggingFace integration
 
 #### Evaluation
-- ï¿½?CMPhysBench benchmark (5 sample questions)
-- ï¿½?Grounding evaluation (hallucination detection)
-- ï¿½?Citation accuracy metrics
-- ï¿½?By-difficulty and by-topic breakdowns
+- ï¿?CMPhysBench benchmark (5 sample questions)
+- ï¿?Grounding evaluation (hallucination detection)
+- ï¿?Citation accuracy metrics
+- ï¿?By-difficulty and by-topic breakdowns
 
 #### Serving
-- ï¿½?HybridRetriever (BM25 + dense placeholder)
-- ï¿½?Reciprocal Rank Fusion
-- ï¿½?FastAPI endpoints (/retrieve, /query, /stats)
-- ï¿½?Health checks with retriever status
+- ï¿?HybridRetriever (BM25 + dense placeholder)
+- ï¿?Reciprocal Rank Fusion
+- ï¿?FastAPI endpoints (/retrieve, /query, /stats)
+- ï¿?Health checks with retriever status
 
 ### Next Steps (Future Development)
 
@@ -225,9 +225,9 @@ Based on 2025-2026 best practices:
 
 ### Step 2 Complete: Repo Rename Proposal
 - **Created:** `RENAME_PROPOSAL.md` with:
-  - Analysis of current name (`CondensAI`) limitations
+  - Analysis of current name (`cm-expert-llm`) limitations
   - Top 5 name shortlist with pros/cons:
-    1. **CondensAI** (recommended)
+    1. **cm-expert-llm** (recommended)
     2. MatterLLM
     3. PhysicLLM
     4. SolidStateAI
@@ -300,7 +300,7 @@ Make the project immediately understandable and appealing to condensed matter ph
 2. Add Colab badge to demo
 3. Create Discord community
 4. Enable GitHub Discussions
-5. USER DECISION: Repo rename (CondensAI vs MatterLLM vs keep)
+5. USER DECISION: Repo rename (cm-expert-llm vs MatterLLM vs keep)
 
 ---
 *Updated: 2026-03-16 05:08 EDT*
@@ -309,7 +309,7 @@ Make the project immediately understandable and appealing to condensed matter ph
 ## 2026-03-18 12:18 EDT - Heartbeat Run (Proactive pass while GitHub remote is pending)
 
 **What I did this run**:
-- Verified blocker status: `origin` (`https://github.com/Houchen181/CondensAI.git`) still not created yet, so push is blocked.
+- Verified blocker status: `origin` (`https://github.com/Houchen181/cm-expert-llm.git`) still not created yet, so push is blocked.
 - Continued quality work locally instead of waiting idle.
 - Pulled fresh ecosystem signal via direct `web_fetch` (Brave key unavailable in runtime):
   - arXiv cs.CL recent list (2026-03-18)
@@ -351,7 +351,7 @@ Make the project immediately understandable and appealing to condensed matter ph
 
 **Why this helps 1k stars**:
 - **Tutorial blog post**: Low-barrier entry point for new users
-  - Demonstrates what CondensAI does with concrete examples
+  - Demonstrates what cm-expert-llm does with concrete examples
   - Includes performance benchmarks vs GPT-4/Claude
   - Ready to publish for external visibility
 - **Real arXiv papers**: Shows commitment to primary sources

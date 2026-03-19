@@ -1,4 +1,4 @@
-# Training Configuration for CondensAI
+# Training Configuration for cm-expert-llm
 # Follows 2025-2026 best practices: DAPT -> LoRA SFT
 
 base_model: mistralai/Mistral-7B-Instruct-v0.3

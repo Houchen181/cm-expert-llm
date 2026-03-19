@@ -1,6 +1,6 @@
 # Recent Condensed Matter Physics Papers (arXiv March 2026)
 
-This directory contains **real, current research papers** from arXiv's condensed matter physics section. These are used as primary training data for CondensAI to ensure up-to-date domain knowledge.
+This directory contains **real, current research papers** from arXiv's condensed matter physics section. These are used as primary training data for cm-expert-llm to ensure up-to-date domain knowledge.
 
 ---
 
@@ -27,7 +27,7 @@ Linear limit continuation was recently developed as a systematic and effective m
 - Thomas-Fermi regime
 - Parametric connectivity
 
-**Relevance to CondensAI:** This paper demonstrates advanced techniques in quantum gases and pattern formation, providing training data on:
+**Relevance to cm-expert-llm:** This paper demonstrates advanced techniques in quantum gases and pattern formation, providing training data on:
 - Mathematical methods in condensed matter (continuation techniques)
 - Quantum many-body physics
 - Nonlinear phenomena in quantum systems
@@ -59,7 +59,7 @@ Feedback control plays a central role in active matter, yet it is inevitably acc
 - Collective pattern formation
 - Non-equilibrium statistical mechanics
 
-**Relevance to CondensAI:** This perspective article provides insights into:
+**Relevance to cm-expert-llm:** This perspective article provides insights into:
 - Soft condensed matter physics
 - Control theory applications in physics
 - Emergent behavior in many-body systems
@@ -93,7 +93,7 @@ We investigate the optical properties of neutral excitons in CdTe/ZnTe quantum d
 - Dark excitons
 - Spin Hamiltonian
 
-**Relevance to CondensAI:** This experimental paper demonstrates:
+**Relevance to cm-expert-llm:** This experimental paper demonstrates:
 - Mesoscale and nanoscale physics
 - Spin physics in semiconductors
 - Strain effects in quantum materials
@@ -106,13 +106,13 @@ We investigate the optical properties of neutral excitons in CdTe/ZnTe quantum d
 
 ## How to Use These Papers
 
-These papers are integrated into CondensAI's retrieval corpus. When users ask questions about:
+These papers are integrated into cm-expert-llm's retrieval corpus. When users ask questions about:
 - Bose-Einstein condensates
 - Active matter and feedback
 - Quantum dots and spin physics
 - Recent advances in condensed matter
 
-CondensAI can retrieve and cite these real papers, providing up-to-date, accurate information grounded in current research.
+cm-expert-llm can retrieve and cite these real papers, providing up-to-date, accurate information grounded in current research.
 
 ## Adding More Papers
 
@@ -138,15 +138,15 @@ To add more papers to the training corpus:
 ## Citation Format
 
 All papers should include:
-- âœ… Full title
-- âœ… Author list
-- âœ… arXiv identifier with category
-- âœ… Submission date
-- âœ… DOI link
-- âœ… Abstract (full text)
-- âœ… Key concepts (extracted)
-- âœ… Relevance to domain expertise
-- âœ… Link to full PDF
+- âœ?Full title
+- âœ?Author list
+- âœ?arXiv identifier with category
+- âœ?Submission date
+- âœ?DOI link
+- âœ?Abstract (full text)
+- âœ?Key concepts (extracted)
+- âœ?Relevance to domain expertise
+- âœ?Link to full PDF
 
 This ensures proper attribution and traceability to primary sources.
 

@@ -1,10 +1,10 @@
 # Contributor Spotlight
 
-This page celebrates the amazing people who contribute to CondensAI!
+This page celebrates the amazing people who contribute to cm-expert-llm!
 
 ## Why Contributors Matter
 
-CondensAI exists because of contributors like you. Every contribution—whether it's fixing a typo, adding a test, writing documentation, or submitting physics content—makes this project better and more useful for everyone.
+cm-expert-llm exists because of contributors like you. Every contribution—whether it's fixing a typo, adding a test, writing documentation, or submitting physics content—makes this project better and more useful for everyone.
 
 ## How to Get Featured
 
@@ -61,7 +61,7 @@ We recognize contributions at different levels:
 | 🥉 First PR | Submit your first merged PR | Name in this file |
 | 🥈 Contributor | 3+ merged PRs | Name + contribution area |
 | 🥇 Core Contributor | 10+ merged PRs or major feature | Permanent section, reviewer status |
-| ⭐ Maintainer | Significant ongoing contributions | Commit access, project decisions |
+| �?Maintainer | Significant ongoing contributions | Commit access, project decisions |
 
 ## Benefits of Contributing
 
@@ -73,7 +73,7 @@ We recognize contributions at different levels:
 
 ## Thank You!
 
-Every contribution matters. Thank you for being part of CondensAI! 🦀
+Every contribution matters. Thank you for being part of cm-expert-llm! 🦀
 
 ---
 

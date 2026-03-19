@@ -1,12 +1,12 @@
-# Stack Decisions - CondensAI (cm-expert-llm)
+# Stack Decisions - cm-expert-llm (cm-expert-llm)
 
-This document explains the technology choices behind CondensAI's architecture. These decisions balance performance, accessibility, and research credibility.
+This document explains the technology choices behind cm-expert-llm's architecture. These decisions balance performance, accessibility, and research credibility.
 
 ## Core Philosophy
 
 **Narrow and deep > Broad and shallow**
 
-CondensAI focuses exclusively on condensed matter physics, enabling it to outperform general LLMs in this domain by:
+cm-expert-llm focuses exclusively on condensed matter physics, enabling it to outperform general LLMs in this domain by:
 - Training on primary sources (papers, textbooks) only
 - Providing citations to original literature
 - Using RAG (Retrieval-Augmented Generation) for factual grounding
@@ -167,7 +167,7 @@ General LLMs are trained on web data (Wikipedia, forums, etc.) which often conta
 - Hand-wavy explanations
 - No citations to original papers
 
-CondensAI trains on:
+cm-expert-llm trains on:
 - arXiv papers (cond-mat)
 - Standard textbooks (Ashcroft/Mermin, Kittel, etc.)
 - Lecture notes from reputable sources
@@ -184,7 +184,7 @@ This enables physicists to:
 - Build on established knowledge
 
 ### 3. Community Validation
-Unlike closed models (GPT-4, Claude), CondensAI is:
+Unlike closed models (GPT-4, Claude), cm-expert-llm is:
 - Open-source (code + weights)
 - Auditable (see exactly what it was trained on)
 - Correctable (submit PRs to fix errors)

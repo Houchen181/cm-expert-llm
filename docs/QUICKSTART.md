@@ -1,4 +1,4 @@
-# Quick Start Guide - CondensAI
+# Quick Start Guide - cm-expert-llm
 
 Get your condensed matter physics expert LLM running in 5 minutes!
 
@@ -12,8 +12,8 @@ Get your condensed matter physics expert LLM running in 5 minutes!
 
 ```bash
 # Clone the repository
-git clone https://github.com/Houchen181/CondensAI.git
-cd CondensAI
+git clone https://github.com/Houchen181/cm-expert-llm.git
+cd cm-expert-llm
 
 # Create virtual environment
 python -m venv .venv
@@ -112,7 +112,7 @@ curl -X POST http://localhost:8080/query \
 ## Project Structure
 
 ```
-CondensAI/
+cm-expert-llm/
 ├── src/cmp_expert/
 �?  ├── data/          # Data ingestion pipeline
 �?  ├── training/      # LoRA training scripts
@@ -219,6 +219,6 @@ netstat -ano | findstr :8080
 
 ## Getting Help
 
-- Issues: https://github.com/Houchen181/CondensAI/issues
-- Documentation: https://github.com/Houchen181/CondensAI/tree/main/docs
-- Examples: https://github.com/Houchen181/CondensAI/tree/main/examples
+- Issues: https://github.com/Houchen181/cm-expert-llm/issues
+- Documentation: https://github.com/Houchen181/cm-expert-llm/tree/main/docs
+- Examples: https://github.com/Houchen181/cm-expert-llm/tree/main/examples

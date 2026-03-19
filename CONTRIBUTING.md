@@ -1,4 +1,4 @@
-# Contributing to CondensAI
+# Contributing to cm-expert-llm
 
 Thank you for your interest in contributing! This project aims to build domain-expert LLMs for condensed matter physics, and we welcome contributions from physicists, ML engineers, educators, and enthusiasts.
 
@@ -15,8 +15,8 @@ Thank you for your interest in contributing! This project aims to build domain-e
 1. **Fork** the repository
 2. **Clone** your fork:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/CondensAI.git
-   cd CondensAI
+   git clone https://github.com/YOUR_USERNAME/cm-expert-llm.git
+   cd cm-expert-llm
    ```
 3. **Set up environment**:
    ```bash
@@ -54,7 +54,7 @@ Thank you for your interest in contributing! This project aims to build domain-e
 1. **Add files** to `data/raw/<domain>/`:
    - Use Markdown format
    - Include proper citations
-   - No AI summaries ‚Äî use original sources only
+   - No AI summaries ‚Ä?use original sources only
 2. **Verify format**:
    ```bash
    python scripts/build_corpus.py --input-dir ./data/raw --output-file ./data/processed/test.jsonl
@@ -138,7 +138,7 @@ def build_corpus(
     pass
 ```
 
-## üè∑Ô∏è Pull Request Process
+## üè∑Ô∏?Pull Request Process
 
 1. **Ensure CI passes**: All tests and linting must pass
 2. **Update documentation**: README, docs/, or docstrings as needed
@@ -152,10 +152,10 @@ def build_corpus(
 If contributing physics content (papers, notes, etc.):
 
 ### Quality Standards
-- ‚úÖ **Primary sources only**: No AI-generated summaries
-- ‚úÖ **Accurate**: Content must be technically correct
-- ‚úÖ **Cited**: Include DOI, arXiv ID, or textbook reference
-- ‚úÖ **Clear**: Well-organized, readable structure
+- ‚ú?**Primary sources only**: No AI-generated summaries
+- ‚ú?**Accurate**: Content must be technically correct
+- ‚ú?**Cited**: Include DOI, arXiv ID, or textbook reference
+- ‚ú?**Clear**: Well-organized, readable structure
 
 ### Format
 ```markdown
@@ -194,10 +194,10 @@ Contributors will be:
 - Tagged in relevant announcements
 - Added as code owners for their contributions
 
-## ‚ùì Questions?
+## ‚ù?Questions?
 
 Open an issue or start a discussion for any questions about contributing. We're happy to help!
 
 ---
 
-Thanks for contributing to CondensAI! üöÄ
+Thanks for contributing to cm-expert-llm! üöÄ
