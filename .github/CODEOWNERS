@@ -1,0 +1,31 @@
+# Code Owners for CondensAI (cm-expert-llm)
+# https://help.github.com/en/articles/about-code-owners
+
+# Default owner for the entire repository
+* @Houchen181
+
+# Core package code
+/src/ @Houchen181
+
+# Training code
+/src/**/training/ @Houchen181
+
+# Data pipeline
+/src/**/data/ @Houchen181
+
+# Evaluation and benchmarks
+/src/**/eval/ @Houchen181
+/tests/ @Houchen181
+
+# Documentation
+/docs/ @Houchen181
+*.md @Houchen181
+
+# Examples and demos
+/examples/ @Houchen181
+
+# CI/CD workflows
+/.github/workflows/ @Houchen181
+
+# Physics content (domain-specific)
+/data/raw/ @Houchen181
