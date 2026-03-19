@@ -1,0 +1,25 @@
+# Funding options for CondensAI (cm-expert-llm)
+# https://docs.github.com/en/articles/displaying-a-sponsor-button-in-your-repository
+
+github: []  # Add GitHub Sponsors username if available
+patreon:    # Add Patreon username
+open_collective: condensai  # Placeholder - create Open Collective when ready
+ko_fi:      # Add Ko-fi username
+tidelift:   # Add Tidelift package name
+community_bridge: # Add Community Bridge project name
+liberapay:  # Add LibrePay username
+issuehunt:  # Add IssueHunt username
+otechie:    # Add Otechie username
+custom:     # Add custom funding URL
+
+# Note: Funding options will be activated when the project reaches:
+# - 100+ active users
+# - Stable v1.0.0 release
+# - Active maintainer community
+#
+# In the meantime, non-monetary contributions are highly valued:
+# - Bug reports and feature requests
+# - Documentation improvements
+# - Physics content contributions
+# - Code contributions (PRs)
+# - Community help (answering questions)
