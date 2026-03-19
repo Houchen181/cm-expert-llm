@@ -1,33 +1,33 @@
-﻿# CondensAI
+# CondensAI
 
 <div align="center">
-  <img src="docs/logo.svg" alt="CondensAI Logo" width="200"/>
-  <br>
-  <strong>Build Domain-Expert LLMs for Condensed Matter Physics</strong>
+ <img src="docs/logo.svg" alt="CondensAI Logo" width="200"/>
+ <br>
+ <strong>Build Domain-Expert LLMs for Condensed Matter Physics</strong>
 </div>
 
 <p align="center">
-  <a href="https://github.com/Houchen181/CondensAI/stargazers">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Houchen181/CondensAI?style=flat"/>
-  </a>
-  <a href="https://github.com/Houchen181/CondensAI/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/Houchen181/CondensAI"/>
-  </a>
-  <a href="https://github.com/Houchen181/CondensAI/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/Houchen181/CondensAI"/>
-  </a>
-  <a href="https://arxiv.org/abs/2508.18124">
-    <img alt="CMPhysBench" src="https://img.shields.io/badge/CMPhysBench-evaluation-blue"/>
-  </a>
+ <a href="https://github.com/Houchen181/CondensAI/stargazers">
+ <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Houchen181/CondensAI?style=flat"/>
+ </a>
+ <a href="https://github.com/Houchen181/CondensAI/issues">
+ <img alt="Issues" src="https://img.shields.io/github/issues/Houchen181/CondensAI"/>
+ </a>
+ <a href="https://github.com/Houchen181/CondensAI/blob/main/LICENSE">
+ <img alt="License" src="https://img.shields.io/github/license/Houchen181/CondensAI"/>
+ </a>
+ <a href="https://arxiv.org/abs/2508.18124">
+ <img alt="CMPhysBench" src="https://img.shields.io/badge/CMPhysBench-evaluation-blue"/>
+ </a>
 </p>
 
 **CondensAI** is an open-source toolkit for building **domain-expert LLM assistants** specialized in condensed matter physics. Turn your research papers, textbooks, and lecture notes into an intelligent, retrieval-augmented Q&A system that actually understands physics.
 
-> **Why this exists:** Most physicists shouldn't need to be ML engineers. This project lets you deploy a custom LLM trained on *your* research area鈥攚ithout requiring a team of AI experts.
+> **Why this exists:** Most physicists shouldn't need to be ML engineers. This project lets you deploy a custom LLM trained on *your* research area—without requiring a team of AI experts.
 
 ---
 
-## 馃幆 What Can You Do?
+## 🔬 What Can You Do?
 
 - **Build a physics tutor** from your favorite textbooks and lecture notes
 - **Create a paper Q&A bot** for your research group's publications
@@ -37,7 +37,7 @@
 
 ---
 
-## 馃殌 Quick Start
+## 🚀 Quick Start
 
 ### 1. Install
 ```bash
@@ -82,7 +82,7 @@ Access the interactive API docs at `http://localhost:8080/docs`
 
 ---
 
-## 馃摎 Tutorials
+## 📚 Tutorials
 
 | Tutorial | Description | Notebook |
 |----------|-------------|----------|
@@ -93,36 +93,36 @@ Access the interactive API docs at `http://localhost:8080/docs`
 
 ---
 
-## 馃敩 Key Features
+## ⚙️ Key Features
 
 ### Data Pipeline
-- 鉁?Automatic chunking with configurable size/overlap
-- 鉁?Metadata extraction (source, type, char count)
-- 鉁?JSONL output format for HuggingFace compatibility
-- 鉁?Supports `.txt`, `.md`, `.tex` files
+- ✅ Automatic chunking with configurable size/overlap
+- ✅ Metadata extraction (source, type, char count)
+- ✅ JSONL output format for HuggingFace compatibility
+- ✅ Supports `.txt`, `.md`, `.tex` files
 
 ### Training
-- 鉁?LoRA fine-tuning (r=32, alpha=64, target_modules=[q,v,k,o]_proj)
-- 鉁?Optional DAPT (Domain Adaptive Pre-Training) stage
-- 鉁?YAML-based configuration
-- 鉁?Dry-run mode for safe validation
-- 鉁?GPU detection and graceful degradation
+- ✅ LoRA fine-tuning (r=32, alpha=64, target_modules=[q,v,k,o]_proj)
+- ✅ Optional DAPT (Domain Adaptive Pre-Training) stage
+- ✅ YAML-based configuration
+- ✅ Dry-run mode for safe validation
+- ✅ GPU detection and graceful degradation
 
 ### Evaluation
-- 鉁?CMPhysBench benchmark (5 sample questions included)
-- 鉁?Grounding evaluation (hallucination detection)
-- 鉁?Citation accuracy metrics
-- 鉁?By-difficulty and by-topic breakdowns
+- ✅ CMPhysBench benchmark (5 sample questions included)
+- ✅ Grounding evaluation (hallucination detection)
+- ✅ Citation accuracy metrics
+- ✅ By-difficulty and by-topic breakdowns
 
 ### Serving
-- 鉁?HybridRetriever (BM25 + dense placeholder)
-- 鉁?Reciprocal Rank Fusion for combining rankings
-- 鉁?FastAPI endpoints (`/retrieve`, `/query`, `/stats`, `/health`)
-- 鉁?Health checks with retriever status
+- ✅ HybridRetriever (BM25 + dense placeholder)
+- ✅ Reciprocal Rank Fusion for combining rankings
+- ✅ FastAPI endpoints (`/retrieve`, `/query`, `/stats`, `/health`)
+- ✅ Health checks with retriever status
 
 ---
 
-## 馃搳 Latest Research Integration
+## 📊 Latest Research Integration
 
 This project incorporates insights from cutting-edge work in scientific AI:
 
@@ -135,29 +135,29 @@ This project incorporates insights from cutting-edge work in scientific AI:
 
 ---
 
-## 馃彈锔?Project Structure
+## 🗂️ Project Structure
 
 ```
 CondensAI/
-鈹溾攢鈹€ src/cmp_expert/
-鈹?  鈹溾攢鈹€ data/            # Data ingestion pipeline
-鈹?  鈹溾攢鈹€ training/        # LoRA training with DAPT support
-鈹?  鈹溾攢鈹€ eval/            # CMPhysBench + Grounding evaluation
-鈹?  鈹斺攢鈹€ serve/           # RAG API (FastAPI)
-鈹溾攢鈹€ configs/             # YAML configurations
-鈹溾攢鈹€ scripts/             # CLI tools
-鈹溾攢鈹€ data/raw/            # Sample physics content
-鈹?  鈹溾攢鈹€ superconductivity/
-鈹?  鈹溾攢鈹€ topology/
-鈹?  鈹斺攢鈹€ correlated/
-鈹溾攢鈹€ examples/            # Interactive tutorials (Jupyter)
-鈹溾攢鈹€ docs/                # Documentation + logo
-鈹斺攢鈹€ tests/               # Unit tests
+├── src/cmp_expert/
+│   ├── data/ # Data ingestion pipeline
+│   ├── training/ # LoRA training with DAPT support
+│   ├── eval/ # CMPhysBench + Grounding evaluation
+│   └── serve/ # RAG API (FastAPI)
+├── configs/ # YAML configurations
+├── scripts/ # CLI tools
+├── data/raw/ # Sample physics content
+│   ├── superconductivity/
+│   ├── topology/
+│   └── correlated/
+├── examples/ # Interactive tutorials (Jupyter)
+├── docs/ # Documentation + logo
+└── tests/ # Unit tests
 ```
 
 ---
 
-## 馃帗 Example Use Cases
+## 💡 Example Use Cases
 
 ### 1. Research Group Paper Bot
 Train on your group's publications + internal notes. New students can ask: *"What's our approach to measuring topological invariants?"*
@@ -170,7 +170,7 @@ Ingest experimental procedures and troubleshooting guides. Lab members ask: *"Wh
 
 ---
 
-## 馃洜锔?Configuration
+## 🛠️ Configuration
 
 ### Training Config (`configs/train.default.yaml`)
 ```yaml
@@ -178,29 +178,30 @@ base_model: mistralai/Mistral-7B-Instruct-v0.3
 train_file: ./data/processed/sft.jsonl
 output_dir: ./artifacts/lora-cmp
 lora:
-  r: 32
-  alpha: 64
-  dropout: 0.05
-  target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj']
+ r: 32
+ alpha: 64
+ dropout: 0.05
+ target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj']
 training:
-  epochs: 3
-  lr: 2e-4
-  batch_size: 2
-  grad_accum: 16
-  max_length: 4096
+ epochs: 3
+ lr: 2e-4
+ batch_size: 2
+ grad_accum: 16
+ max_length: 4096
 ```
 
 ---
 
-## 馃搱 Roadmap
+## 🗺️ Roadmap
 
-### Completed 鉁?- [x] Data ingestion pipeline
+### Completed ✅
+- [x] Data ingestion pipeline
 - [x] LoRA training with DAPT support
 - [x] CMPhysBench evaluation
 - [x] Hybrid RAG serving layer
 - [x] Example notebooks and documentation
 
-### In Progress 馃敡
+### In Progress 🚧
 - [ ] Dense vector retrieval (sentence-transformers)
 - [ ] Cross-encoder reranking
 - [ ] UI frontend (Streamlit/Gradio)
@@ -210,7 +211,7 @@ training:
 
 ---
 
-## 馃 Contributing
+## 🤝 Contributing
 
 We welcome contributions! See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines.
 
@@ -222,13 +223,13 @@ We welcome contributions! See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guideline
 
 ---
 
-## 馃搫 License
+## 📜 License
 
 Apache License 2.0 - See [LICENSE](LICENSE) for details.
 
 ---
 
-## 馃檹 Acknowledgments
+## 🙏 Acknowledgments
 
 - **CMPhysBench** team for the evaluation benchmark
 - **Hugging Face** for transformers, peft, and datasets libraries
@@ -237,11 +238,11 @@ Apache License 2.0 - See [LICENSE](LICENSE) for details.
 
 ---
 
-## 馃摤 Contact
+## 📬 Contact
 
 - **Issues:** [GitHub Issues](https://github.com/Houchen181/CondensAI/issues)
 - **Repository:** https://github.com/Houchen181/CondensAI
 
 ---
 
-*Built with 鉂わ笍 for the condensed matter physics community*
+*Built with ❤️ for the condensed matter physics community*
