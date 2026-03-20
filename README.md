@@ -96,29 +96,29 @@ Access the interactive API docs at `http://localhost:8080/docs`
 ## ⚙️ Key Features
 
 ### Data Pipeline
-- �?Automatic chunking with configurable size/overlap
-- �?Metadata extraction (source, type, char count)
-- �?JSONL output format for HuggingFace compatibility
-- �?Supports `.txt`, `.md`, `.tex` files
+- ✅ Automatic chunking with configurable size/overlap
+- ✅ Metadata extraction (source, type, char count)
+- ✅ JSONL output format for HuggingFace compatibility
+- ✅ Supports `.txt`, `.md`, `.tex` files
 
 ### Training
-- �?LoRA fine-tuning (r=32, alpha=64, target_modules=[q,v,k,o]_proj)
-- �?Optional DAPT (Domain Adaptive Pre-Training) stage
-- �?YAML-based configuration
-- �?Dry-run mode for safe validation
-- �?GPU detection and graceful degradation
+- ✅ LoRA fine-tuning (r=32, alpha=64, target_modules=[q,v,k,o]_proj)
+- ✅ Optional DAPT (Domain Adaptive Pre-Training) stage
+- ✅ YAML-based configuration
+- ✅ Dry-run mode for safe validation
+- ✅ GPU detection and graceful degradation
 
 ### Evaluation
-- �?CMPhysBench benchmark (5 sample questions included)
-- �?Grounding evaluation (hallucination detection)
-- �?Citation accuracy metrics
-- �?By-difficulty and by-topic breakdowns
+- ✅ CMPhysBench benchmark (5 sample questions included)
+- ✅ Grounding evaluation (hallucination detection)
+- ✅ Citation accuracy metrics
+- ✅ By-difficulty and by-topic breakdowns
 
 ### Serving
-- �?HybridRetriever (BM25 + dense placeholder)
-- �?Reciprocal Rank Fusion for combining rankings
-- �?FastAPI endpoints (`/retrieve`, `/query`, `/stats`, `/health`)
-- �?Health checks with retriever status
+- ✅ HybridRetriever (BM25 + dense placeholder)
+- ✅ Reciprocal Rank Fusion for combining rankings
+- ✅ FastAPI endpoints (`/retrieve`, `/query`, `/stats`, `/health`)
+- ✅ Health checks with retriever status
 
 ---
 
@@ -135,21 +135,21 @@ This project incorporates insights from cutting-edge work in scientific AI:
 
 ---
 
-## 🗂�?Project Structure
+## 🗂️ Project Structure
 
 ```
 cm-expert-llm/
-├── src/cmp_expert/
-�?  ├── data/ # Data ingestion pipeline
-�?  ├── training/ # LoRA training with DAPT support
-�?  ├── eval/ # CMPhysBench + Grounding evaluation
-�?  └── serve/ # RAG API (FastAPI)
+├── src/cm_expert/
+│   ├── data/ # Data ingestion pipeline
+│   ├── training/ # LoRA training with DAPT support
+│   ├── eval/ # CMPhysBench + Grounding evaluation
+│   └── serve/ # RAG API (FastAPI)
 ├── configs/ # YAML configurations
 ├── scripts/ # CLI tools
 ├── data/raw/ # Sample physics content
-�?  ├── superconductivity/
-�?  ├── topology/
-�?  └── correlated/
+│   ├── superconductivity/
+│   ├── topology/
+│   └── correlated/
 ├── examples/ # Interactive tutorials (Jupyter)
 ├── docs/ # Documentation + logo
 └── tests/ # Unit tests
@@ -170,7 +170,7 @@ Ingest experimental procedures and troubleshooting guides. Lab members ask: *"Wh
 
 ---
 
-## 🛠�?Configuration
+## 🛠️ Configuration
 
 ### Training Config (`configs/train.default.yaml`)
 ```yaml
@@ -192,9 +192,10 @@ training:
 
 ---
 
-## 🗺�?Roadmap
+## 🗺️ Roadmap
 
-### Completed �?- [x] Data ingestion pipeline
+### Completed ✅
+- [x] Data ingestion pipeline
 - [x] LoRA training with DAPT support
 - [x] CMPhysBench evaluation
 - [x] Hybrid RAG serving layer
