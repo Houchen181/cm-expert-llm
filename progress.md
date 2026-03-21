@@ -1,5 +1,47 @@
 # Progress Log - cm-expert-llm
 
+## 2026-03-21 05:01 EDT - Heartbeat Run (Docker + Badges Complete)
+
+**Status**: RESUMED
+- Local repo: synced with remote (commit `74b8c6f`)
+- Remote: `https://github.com/Houchen181/cm-expert-llm`
+- Last activity: March 21 heartbeat - Docker deployment + CI/Colab badges
+
+**Completed this round**:
+1. **Added CI and Colab badges to README** (commit `a3bb9d5`)
+   - CI status badge: Shows build status from GitHub Actions
+   - Colab badge: One-click demo notebook in Google Colab
+2. **Created Dockerfile for one-line deployment** (commit `3b0d2c6`)
+   - Python 3.11 slim base image
+   - Optimized layer caching
+   - Exposes API on port 8000
+3. **Created .dockerignore** to exclude unnecessary files
+4. **Added Docker deployment instructions to README** (commit `74b8c6f`)
+   - Step-by-step Docker build/run commands
+   - Volume mounting for custom data
+
+**Why this helps 1k stars**:
+- **Lower barrier**: Docker = one-line deployment for non-technical users
+- **Professional appearance**: CI badge signals active maintenance
+- **Easy tryout**: Colab badge = instant demo without setup
+- **Production ready**: Docker deployment for real-world use
+
+**Current repo state**:
+- All commits pushed, clean working tree
+- 12 recent arXiv papers in training corpus
+- Docker deployment ready
+- CI/Colab badges displayed
+- Production-ready for v0.1.0 release
+
+**Next 5 steps**:
+1. ✅ Add GitHub Actions workflow badge to README (DONE)
+2. Create GitHub Discussions categories (Q&A, Ideas, Show & Tell) - user action
+3. ✅ Add `CONTRIBUTING.md` quick-start for physics researchers (EXISTS)
+4. ✅ Prepare Dockerfile for one-line deployment (DONE)
+5. Add `examples/05_continuous_arxiv.ipynb` for auto-monitoring new papers
+
+---
+
 ## 2026-03-21 04:01 EDT - Heartbeat Run (March 21 Status Check + New Papers)
 
 **Status**: RESUMED
