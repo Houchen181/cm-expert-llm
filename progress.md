@@ -1,5 +1,41 @@
 # Progress Log - cm-expert-llm
 
+## 2026-03-21 04:01 EDT - Heartbeat Run (March 21 Status Check + New Papers)
+
+**Status**: RESUMED
+- Local repo: synced with remote (commit `b701dd7`)
+- Remote: `https://github.com/Houchen181/cm-expert-llm`
+- Last activity: March 21 heartbeat - added 3 new arXiv papers
+
+**Completed this round**:
+- Added 3 new arXiv papers from March 19, 2026 to `data/raw/recent_arxiv/README.md`:
+  1. **arXiv:2603.18998** - Thermal entropy computation for doped Hubbard model (quantum Monte Carlo)
+  2. **arXiv:2603.18989** - Buckled honeycomb lattice antiferromagnet Co3ZnNb2O9 (frustrated magnetism)
+  3. **arXiv:2603.18959** - Nanocrystal superlattices on 2D perovskites (light-harvesting heterostructures)
+- Pushed to GitHub (commit `b701dd7`)
+- Total recent arXiv papers in corpus: **12 papers** (March 18-19, 2026)
+
+**Why this helps 1k stars**:
+- **Continuous updates**: Daily/weekly paper additions show active maintenance
+- **Diverse subfields**: Covers strongly correlated electrons, frustrated magnetism, 2D materials, perovskites
+- **Primary sources**: All papers have full abstracts, DOIs, and proper citations
+- **Training quality**: Real research papers ensure domain expertise accuracy
+
+**Current repo state**:
+- All commits pushed, clean working tree
+- 12 recent arXiv papers in training corpus
+- All documentation up to date
+- Production-ready for v0.1.0 release
+
+**Next 5 steps**:
+1. Add GitHub Actions workflow badge to README (build status)
+2. Create GitHub Discussions categories (Q&A, Ideas, Show & Tell)
+3. Add `CONTRIBUTING.md` quick-start for physics researchers
+4. Prepare Dockerfile for one-line deployment
+5. Add `examples/05_continuous_arxiv.ipynb` for auto-monitoring new papers
+
+---
+
 ## 2026-03-21 02:03 EDT - Heartbeat Status Check
 
 **Status**: RESUMED
