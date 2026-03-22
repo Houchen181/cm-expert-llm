@@ -1,224 +1,124 @@
-# Quick Start Guide - cm-expert-llm
+# 5-Minute Quick Start Guide
 
-Get your condensed matter physics expert LLM running in 5 minutes!
+**Goal**: Get cm-expert-llm running and answer your first physics question in 5 minutes.
 
-## Prerequisites
+## ⚡ Prerequisites (1 min)
 
-- Python 3.10+
-- 8GB+ RAM (16GB recommended)
-- Optional: GPU with CUDA for training
+- Python 3.10+ installed
+- Git installed
+- Basic command line knowledge
 
-## Installation
+**Already have these?** Skip to Step 1.
+
+## Step 1: Install (1 min)
 
 ```bash
 # Clone the repository
 git clone https://github.com/Houchen181/cm-expert-llm.git
 cd cm-expert-llm
 
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-## Step 1: Prepare Your Data
+**Windows users:** Use PowerShell or Command Prompt.
 
-Place your condensed matter physics documents in `data/raw/`:
-- Research papers (arXiv cond-mat)
-- Textbook chapters
-- Lecture notes
-- Any domain-specific text
-
-Supported formats: `.txt`, `.md`, `.tex`
+## Step 2: Verify Installation (30 sec)
 
 ```bash
-# Example: Add a sample paper
-echo "# Superconductivity Notes\n\nThe Meissner effect..." > data/raw/superconductivity.md
+# Run tests to verify everything works
+python -m pytest tests/ -v
 ```
 
-## Step 2: Build the Corpus
+You should see: `9 passed, 5 skipped`
+
+✅ **Success?** Great! Move to Step 3.  
+❌ **Errors?** Check [INSTALL.md](INSTALL.md) for troubleshooting.
+
+## Step 3: Try the Demo (2 min)
+
+### Option A: Google Colab (Easiest - No setup!)
+Click here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Houchen181/cm-expert-llm/blob/main/examples/03_demo.ipynb)
+
+### Option B: Run Locally
+```bash
+# Open the demo notebook
+jupyter notebook examples/03_demo.ipynb
+
+# Or run the demo script
+python examples/showcase/run_all.py
+```
+
+## Step 4: Ask Your First Question (1 min)
 
 ```bash
-python scripts/build_corpus.py --input-dir ./data/raw --output-file ./data/processed/sft.jsonl
-```
-
-This will:
-- Chunk documents into 800-word segments
-- Extract metadata
-- Create JSONL format for training
-
-## Step 3: Train Your Model
-
-### Option A: Quick LoRA Fine-tuning (Recommended)
-
-```bash
-python scripts/train_lora.py --config configs/train.default.yaml
-```
-
-### Option B: With Domain-Adaptive Pretraining
-
-Edit `configs/train.default.yaml`:
-```yaml
-dapt:
-  enabled: true
-  data_file: ./data/processed/dapt_corpus.jsonl
-  epochs: 1
-```
-
-Then run training as above.
-
-## Step 4: Evaluate
-
-Run benchmark evaluations:
-
-```bash
-# Run all evaluations
-python scripts/run_eval.py --all
-
-# Or run specific benchmarks
-python scripts/run_eval.py --benchmark  # CMPhysBench
-python scripts/run_eval.py --grounding  # Grounding metrics
-```
-
-## Step 5: Deploy RAG API
-
-Start the RAG serving layer:
-
-```bash
+# Start the API server
 python scripts/serve_api.py --config configs/serve.default.yaml
+
+# Then in another terminal, ask a question:
+curl http://localhost:8000/query -d '{"question": "What is the Meissner effect?"}'
 ```
 
-The API will be available at `http://localhost:8080`
+**Expected output**: An answer about superconductivity with citations!
 
-### Test the API
+## 🎉 Congratulations!
 
+You've successfully:
+- ✅ Installed cm-expert-llm
+- ✅ Verified the installation
+- ✅ Run the demo
+- ✅ Asked your first physics question
+
+## 🚀 What's Next?
+
+### Path 1: Build Your Own Physics Expert
+1. **Prepare your data**: Collect physics papers/textbooks
+2. **Build corpus**: `python scripts/build_corpus.py --input-dir ./data/raw --output-file ./data/processed/sft.jsonl`
+3. **Train LoRA**: `python scripts/train_lora.py --config configs/train.default.yaml`
+4. **Deploy**: `python scripts/serve_api.py --config configs/serve.default.yaml`
+
+See [examples/01_data_ingestion.ipynb](../examples/01_data_ingestion.ipynb) for step-by-step.
+
+### Path 2: Learn More
+- **Architecture**: [docs/ARCHITECTURE.md](ARCHITECTURE.md) - How the system works
+- **Data Guide**: [data/raw/README.md](../data/raw/README.md) - What data to use
+- **Training Guide**: [examples/02_training.ipynb](../examples/02_training.ipynb) - Fine-tune your own model
+- **Showcase**: [examples/showcase/](../examples/showcase/) - Real physics examples
+
+### Path 3: Contribute
+- **Add physics content**: [CONTRIBUTING.md](../CONTRIBUTING.md)
+- **Report bugs**: [GitHub Issues](https://github.com/Houchen181/cm-expert-llm/issues)
+- **Join discussions**: [GitHub Discussions](https://github.com/Houchen181/cm-expert-llm/discussions) (once enabled)
+
+## 🆘 Common Issues
+
+### "ModuleNotFoundError: No module named 'torch'"
 ```bash
-# Health check
-curl http://localhost:8080/health
-
-# Retrieve relevant chunks
-curl -X POST http://localhost:8080/retrieve \
-  -H "Content-Type: application/json" \
-  -d '{"query": "What is the Meissner effect?", "top_k": 5}'
-
-# Query with RAG
-curl -X POST http://localhost:8080/query \
-  -H "Content-Type: application/json" \
-  -d '{"query": "Explain superconductivity", "top_k": 5}'
+pip install torch --index-url https://download.pytorch.org/whl/cu118
 ```
 
-## Project Structure
-
-```
-cm-expert-llm/
-├── src/cmp_expert/
-�?  ├── data/          # Data ingestion pipeline
-�?  ├── training/      # LoRA training scripts
-�?  ├── eval/          # Benchmark evaluations
-�?  └── serve/         # RAG API serving
-├── configs/           # YAML configurations
-├── scripts/           # Command-line tools
-├── data/
-�?  ├── raw/          # Input documents
-�?  └── processed/    # Processed JSONL files
-├── examples/          # Jupyter notebooks
-└── docs/             # Documentation
-```
-
-## Configuration
-
-### Training Config (`configs/train.default.yaml`)
-
-```yaml
-base_model: mistralai/Mistral-7B-Instruct-v0.3
-lora:
-  r: 32              # LoRA rank
-  alpha: 64          # Scaling factor
-  target_modules: ["q_proj", "v_proj"]
-training:
-  epochs: 3
-  lr: 2e-4
-  batch_size: 2
-```
-
-### Serving Config (`configs/serve.default.yaml`)
-
-```yaml
-host: 0.0.0.0
-port: 8080
-retriever:
-  k1: 1.5            # BM25 parameter
-  b: 0.75            # BM25 parameter
-  k: 60              # RRF constant
-```
-
-## Common Tasks
-
-### Add More Training Data
-
+### "CUDA out of memory"
+Use CPU mode or reduce batch size:
 ```bash
-# Add new documents to data/raw/
-echo "New physics content..." >> data/raw/new_topic.md
-
-# Rebuild corpus
-python scripts/build_corpus.py
+python scripts/train_lora.py --config configs/train.default.yaml --batch_size 4
 ```
 
-### Customize Chunking
-
+### "Port 8000 already in use"
+Change the port:
 ```bash
-python scripts/build_corpus.py \
-  --chunk-size 1000 \
-  --overlap 150
+python scripts/serve_api.py --config configs/serve.default.yaml --port 8001
 ```
 
-### Run Specific Benchmark
+## 📞 Need Help?
 
-```bash
-# CMPhysBench only
-python scripts/run_eval.py --benchmark --benchmark-file ./custom_bench.jsonl
-```
+1. **Check the FAQ**: [docs/FAQ.md](FAQ.md) (if exists)
+2. **Search issues**: https://github.com/Houchen181/cm-expert-llm/issues
+3. **Ask in discussions**: https://github.com/Houchen181/cm-expert-llm/discussions
+4. **Open a new issue**: https://github.com/Houchen181/cm-expert-llm/issues/new
 
-## Troubleshooting
+---
 
-### Out of Memory During Training
+**Time elapsed**: ~5 minutes  
+**Next step**: Build your own domain expert LLM! 🚀
 
-Reduce batch size in config:
-```yaml
-training:
-  batch_size: 1
-  grad_accum: 32  # Increase to compensate
-```
-
-### Poor Retrieval Results
-
-1. Increase corpus size (more domain documents)
-2. Adjust chunk overlap:
-```bash
-python scripts/build_corpus.py --overlap 200
-```
-
-### API Not Starting
-
-Check if port 8080 is in use:
-```bash
-# Windows
-netstat -ano | findstr :8080
-
-# Change port in serve.default.yaml if needed
-```
-
-## Next Steps
-
-- 📚 Read the [Architecture Guide](architecture.md)
-- 📊 Explore [Benchmark Results](results/)
-- 🔧 Customize for your domain
-- 🤝 Contribute improvements
-
-## Getting Help
-
-- Issues: https://github.com/Houchen181/cm-expert-llm/issues
-- Documentation: https://github.com/Houchen181/cm-expert-llm/tree/main/docs
-- Examples: https://github.com/Houchen181/cm-expert-llm/tree/main/examples
+*Last updated: March 22, 2026*
