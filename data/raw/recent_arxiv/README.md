@@ -221,3 +221,46 @@
 
 *Last updated: 2026-03-21*
 *These papers represent cutting-edge research in condensed matter physics as of March 2026.*
+
+ - - - 
+ # #   P a p e r   1 3 :   T h r e e - C o m p o n e n t   B E C   I n s t a b i l i t i e s 
+ 
+ * * T i t l e : * *   R o t a t i o n - t r i g g e r e d   K e l v i n - H e l m h o l t z   a n d   c o u n t e r - s u p e r f l o w   i n s t a b i l i t i e s   i n   a   t h r e e - c o m p o n e n t   B o s e - E i n s t e i n   c o n d e n s a t e 
+ 
+ * * A u t h o r s : * *   S u s o v a n   G i r i   e t   a l . 
+ 
+ * * a r X i v : * *   a r X i v : 2 6 0 3 . 1 9 2 0 7   [ c o n d - m a t . q u a n t - g a s ] 
+ 
+ * * D a t e : * *   M a r c h   1 9 ,   2 0 2 6 
+ 
+ * * D O I : * *   [ 1 0 . 4 8 5 5 0 / a r X i v . 2 6 0 3 . 1 9 2 0 7 ] ( h t t p s : / / d o i . o r g / 1 0 . 4 8 5 5 0 / a r X i v . 2 6 0 3 . 1 9 2 0 7 ) 
+ 
+ * * A b s t r a c t : * *   I n t e r f a c i a l   h y d r o d y n a m i c   i n s t a b i l i t i e s   i n   m u l t i c o m p o n e n t   s u p e r f l u i d s   p r o v i d e   a   v e r s a t i l e   p l a t f o r m   t o   e x p l o r e   n o n e q u i l i b r i u m   q u a n t u m   d y n a m i c s   b e y o n d   c l a s s i c a l   f l u i d   a n a l o g u e s .   W e   s t u d y   d y n a m i c a l   i n t e r f a c i a l   i n s t a b i l i t i e s   i n   a   q u a s i - t w o - d i m e n s i o n a l   t h r e e - c o m p o n e n t   B o s e - E i n s t e i n   c o n d e n s a t e   c o n f i n e d   i n   a   h a r m o n i c   t r a p ,   w h e r e   r o t a t i o n   i s   a p p l i e d   s e l e c t i v e l y   t o   t h e   i n t e r m e d i a t e   c o m p o n e n t   t o   g e n e r a t e   c o n t r o l l e d   r e l a t i v e   m o t i o n   a t   t w o   i n t e r f a c e s .   T h r e e   r e g i m e s   a r e   e x a m i n e d :   K e l v i n - H e l m h o l t z   i n s t a b i l i t y   i n   t h e   s t r o n g l y   i m m i s c i b l e   l i m i t ,   c o u n t e r - s u p e r f l o w   i n s t a b i l i t y   i n   t h e   p a r t i a l l y   m i s c i b l e   r e g i m e ,   a n d   a   p a r a m e t e r   w i n d o w   w h e r e   b o t h   u n s t a b l e   m e c h a n i s m s   a r e   p r e s e n t . 
+ 
+ * * K e y   C o n c e p t s : * * 
+ -   B o s e - E i n s t e i n   c o n d e n s a t e s 
+ -   K e l v i n - H e l m h o l t z   i n s t a b i l i t y 
+ -   C o u n t e r - s u p e r f l o w   i n s t a b i l i t y 
+ -   Q u a n t u m   h y d r o d y n a m i c s 
+ -   G r o s s - P i t a e v s k i i   e q u a t i o n 
+ -   B o g o l i u b o v - d e   G e n n e s   a n a l y s i s 
+ -   M u l t i c o m p o n e n t   s u p e r f l u i d s 
+ -   I n t e r f a c i a l   d y n a m i c s 
+ 
+ * * R e l e v a n c e   t o   c m - e x p e r t - l l m : * *   T h i s   t h e o r e t i c a l   p a p e r   d e m o n s t r a t e s : 
+ -   Q u a n t u m   f l u i d   d y n a m i c s 
+ -   I n t e r f a c i a l   i n s t a b i l i t y   m e c h a n i s m s 
+ -   M u l t i c o m p o n e n t   B E C   p h y s i c s 
+ -   N u m e r i c a l   s i m u l a t i o n   t e c h n i q u e s 
+ -   C o n t r o l l e d   q u a n t u m   s y s t e m s 
+ 
+ * * F u l l   T e x t : * *   [ V i e w   P D F ] ( h t t p s : / / a r x i v . o r g / p d f / 2 6 0 3 . 1 9 2 0 7 ) 
+ 
+ * * C o m m e n t s : * *   1 0   p a g e s ,   9   f i g u r e s 
+ 
+ - - - 
+ 
+ * L a s t   u p d a t e d :   2 0 2 6 - 0 3 - 2 2 * 
+ * T h e s e   p a p e r s   r e p r e s e n t   c u t t i n g - e d g e   r e s e a r c h   i n   c o n d e n s e d   m a t t e r   p h y s i c s   a s   o f   M a r c h   2 0 2 6 . * 
+  
+ 
