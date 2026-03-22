@@ -1,32 +1,31 @@
 # Progress Log - cm-expert-llm
 
-## 2026-03-22 05:01 EDT - Heartbeat Run (Test Suite Improved)
+## 2026-03-22 06:01 EDT - Heartbeat Run (13th arXiv Paper Added)
 
 **Status**: RESUMED, continuing proactive development toward 1k stars.
 
 **Completed this round**:
-1. **Created comprehensive test suite** (commit `6c85061`):
-   - `tests/test_training.py`: 4 tests for config loading and LoRA structure
-   - `tests/test_eval.py`: 4 tests for evaluation modules
-   - Fixed import errors in `test_pipeline.py` and `test_retriever.py`
-   - All 9 tests pass (5 skipped due to optional PyYAML dependency)
+1. **Added 13th arXiv paper** to `data/raw/recent_arxiv/README.md` (commit `30b8ddb`):
+   - Paper: "Rotation-triggered Kelvin-Helmholtz and counter-superflow instabilities in a three-component Bose-Einstein condensate"
+   - arXiv:2603.19207 [cond-mat.quant-gas]
+   - Demonstrates quantum hydrodynamics in multicomponent BECs
+   - Includes full abstract, key concepts, and relevance to project
 
-2. **Fixed test infrastructure**:
-   - Corrected package imports (`cm_expert` not `cm-expert-llm`)
-   - Added proper encoding handling (UTF-8)
-   - Made tests robust to missing optional dependencies
+2. **Kept corpus current**:
+   - Total papers: 13 (from 12)
+   - All from March 2026 (latest research)
+   - Diverse subfields: quantum gases, fluids, materials
 
 **Why this helps 1k stars**:
-- **Credibility**: Comprehensive tests signal professional project
-- **Trust**: Researchers can verify code correctness
-- **CI/CD ready**: Automated testing on every PR
-- **Contributor friendly**: Easy to verify changes don't break things
-- **Quality assurance**: Catches bugs before they reach users
+- **Continuous updates**: Shows active maintenance
+- **Fresh content**: Training on latest research, not stale data
+- **Diverse coverage**: Multiple subfields represented
+- **Academic credibility**: Real papers with DOIs and proper citations
 
 **Current repo state**:
 - All commits pushed, clean working tree
+- 13 recent arXiv papers in training corpus
 - 14 total tests (9 passing, 5 skipped optional)
-- 12 recent arXiv papers in training corpus
 - 3 showcase examples with real physics questions
 - Docker deployment ready
 - CI/Colab badges displayed
@@ -46,4 +45,4 @@
 
 ---
 
-## 2026-03-22 04:05 EDT - Heartbeat Run (Showcase Examples Added)
+## 2026-03-22 05:01 EDT - Heartbeat Run (Test Suite Improved)
