@@ -1,60 +1,122 @@
-# User Action Required: Create cm-expert-llm GitHub Repository
+# User Action Required: GitHub Setup for 1k Star Goal
 
-## What needs to be done
-
-The local repository has been renamed to **cm-expert-llm** and is ready to push, but the remote GitHub repository needs to be created first.
-
-## Steps
-
-### 1. Create GitHub Repository
-Go to: https://github.com/new
-
-**Settings:**
-- **Repository name**: `cm-expert-llm`
-- **Description**: "Domain-expert LLM toolkit for condensed matter physics - Build your own physics expert with research papers and textbooks"
-- **Visibility**: Public (for 1k star goal)
-- **Initialize with**: 
-  - [ ] ~~Add a README file~~ (leave unchecked - we have existing content)
-  - [ ] ~~Add .gitignore~~ (leave unchecked - we have existing .gitignore)
-  - [ ] ~~Choose a license~~ (leave unchecked - we have LICENSE file)
-
-### 2. Copy the Repository URL
-After creation, copy the URL (should be):
-```
-https://github.com/Houchen181/cm-expert-llm.git
-```
-
-### 3. Push Local Changes
-Run these commands in the repository root:
-
-```powershell
-cd C:\Users\xu\.openclaw\workspace\llm_physics_project
-
-# Set remote to new repo
-git remote set-url origin https://github.com/Houchen181/cm-expert-llm.git
-
-# Push main branch
-git push -u origin main
-```
-
-### 4. Verify on GitHub
-- Check that all files appear on GitHub
-- Verify CI workflow is detected (should show Actions tab)
-- Check that LICENSE is detected
-
-## After Push - Next Steps
-
-Once pushed, I will immediately:
-1. Add GitHub Actions CI badge to README
-2. Add Colab badge to demo notebook  
-3. Create Discord community server link
-4. Add GitHub Discussions enablement instructions
-5. Create issue templates for community contributions
-
-## Alternative: Let me know when ready
-If you prefer, just create the repo and tell me when it's done - I can provide the exact push commands once the repo exists.
+## Current Status ✅
+- **Repository**: Created and synced at https://github.com/Houchen181/cm-expert-llm
+- **Local state**: Clean, all commits pushed
+- **CI/CD**: Configured and running
+- **Documentation**: Complete
+- **Docker**: Ready for deployment
+- **Examples**: 5 notebooks + Streamlit UI
 
 ---
 
-**Status**: �?Local commits ready (2 commits ahead)  
-**Awaiting**: GitHub repo creation by user
+## Actions Needed (User)
+
+### 1. Enable GitHub Discussions (High Priority)
+GitHub Discussions is critical for community building and star growth.
+
+**Steps:**
+1. Go to: https://github.com/Houchen181/cm-expert-llm/settings
+2. Scroll to "Features" section
+3. Check "Discussions" ✓
+4. Click "Set up in Discussions"
+
+**Why this matters:**
+- Creates a place for Q&A (reduces issue clutter)
+- Builds community around the project
+- Shows visitors the project is active and welcoming
+- Successful repos use Discussions for support, not just Issues
+
+**After enabling:**
+- I will seed it with starter topics (Q&A, Ideas, Showcase, Announcements)
+- Create discussion templates for common questions
+
+---
+
+### 2. Create v0.1.0 Release Tag (Medium Priority)
+Tagging the first release signals stability and gives people a concrete version to reference.
+
+**Steps:**
+1. Go to: https://github.com/Houchen181/cm-expert-llm/releases
+2. Click "Create a new release"
+3. Tag version: `v0.1.0`
+4. Target: `main`
+5. Title: "v0.1.0 - Initial Release"
+6. Copy release notes from `CHANGELOG.md`
+7. Click "Publish release"
+
+**Alternative (command line):**
+```powershell
+cd C:\Users\xu\.openclaw\workspace\llm_physics_project
+git tag -a v0.1.0 -m "Initial release - domain expert LLM toolkit"
+git push origin v0.1.0
+```
+
+**Why this matters:**
+- Gives users a stable version to install
+- Shows project maturity
+- Easier to reference in papers/tutorials
+- Milestone for social media announcement
+
+---
+
+### 3. Social Media Announcement (After Release)
+Once v0.1.0 is tagged, announce on these platforms:
+
+**Priority order:**
+1. **Twitter/X**: Thread with demo GIF + link
+2. **LinkedIn**: Post about the project
+3. **Reddit**: 
+   - r/MachineLearning
+   - r/Physics
+   - r/LocalLLaMA
+   - r/condensedmatter
+4. **Hacker News**: "Show HN" post
+5. **Discord/Slack**: Physics and ML communities
+
+**Template post:**
+```
+🚀 Announcing cm-expert-llm v0.1.0!
+
+Build domain-expert LLMs for condensed matter physics.
+
+Features:
+- RAG pipeline for physics Q&A
+- LoRA fine-tuning (consumer GPU friendly)
+- CMPhysBench evaluation framework
+- Streamlit UI + Colab demo
+- Docker deployment
+
+Try it: https://github.com/Houchen181/cm-expert-llm
+Demo: [Colab link]
+
+#MachineLearning #Physics #OpenSource
+```
+
+---
+
+## What I'm Doing Proactively
+
+While waiting for these actions, I'm continuously improving the repo:
+- Adding real arXiv papers to training corpus
+- Improving documentation
+- Creating examples and tutorials
+- Enhancing CI/CD workflows
+- Preparing release infrastructure
+
+---
+
+## Timeline Suggestion
+
+| When | Action |
+|------|--------|
+| Now | Enable GitHub Discussions |
+| Today | Create v0.1.0 release tag |
+| This week | Social media announcement |
+| Ongoing | I'll continue improving repo quality |
+
+---
+
+**Questions?** Just ask - I'm here to help make this repo successful! 🚀
+
+*Last updated: 2026-03-22 04:02 EDT*
