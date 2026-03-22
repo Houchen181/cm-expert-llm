@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
-from cm-expert-llm.serve.retriever import HybridRetriever
+from cm_expert.serve.retriever import HybridRetriever
 
 def test_retriever_init():
     """Test retriever initialization."""

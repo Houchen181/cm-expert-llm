@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
-from cm-expert-llm.data.pipeline import chunk_text, load_text_file
+from cm_expert.data.pipeline import chunk_text, load_text_file
 
 def test_chunk_text_short():
     """Test chunking short text."""
