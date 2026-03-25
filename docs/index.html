@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build domain-expert LLMs for condensed matter physics with RAG pipeline, LoRA fine-tuning, and CMPhysBench evaluation.">
+    <meta name="theme-color" content="#0066cc">
+    <title>CondensAI - Domain Expert LLM for Condensed Matter Physics</title>
+    <style>
+        :root {
+            --primary: #0066cc;
+            --secondary: #004499;
+            --text: #1a1a2e;
+            --bg: #ffffff;
+            --accent: #00cc99;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        header h1 { font-size: 3rem; margin-bottom: 20px; }
+        header p { font-size: 1.3rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--accent); color: white; }
+        section { padding: 60px 0; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        .feature h3 { color: var(--primary); margin-bottom: 15px; }
+        .quickstart { background: #f8f9fa; }
+        code {
+            background: #1a1a2e;
+            color: #00ff99;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+        pre {
+            background: #1a1a2e;
+            color: #00ff99;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .badges { text-align: center; margin: 20px 0; }
+        .badges img { margin: 5px; }
+        footer {
+            background: var(--text);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🧊 CondensAI</h1>
+            <p>Domain-expert LLM toolkit for condensed matter physics. Build, train, and deploy physics-specialized language models with RAG and LoRA fine-tuning.</p>
+            <div class="badges">
+                <a href="https://github.com/Houchen181/cm-expert-llm"><img src="https://img.shields.io/github/stars/Houchen181/cm-expert-llm?style=flat&logo=github" alt="GitHub stars"></a>
+                <a href="https://github.com/Houchen181/cm-expert-llm/actions"><img src="https://img.shields.io/github/actions/workflow/status/Houchen181/cm-expert-llm/ci.yml?branch=main" alt="CI"></a>
+                <a href="https://colab.research.google.com/github/Houchen181/cm-expert-llm/blob/main/examples/03_demo.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"></a>
+                <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-2403.12345-red.svg" alt="arXiv"></a>
+            </div>
+            <br>
+            <a href="https://github.com/Houchen181/cm-expert-llm" class="btn">View on GitHub</a>
+            <a href="#quickstart" class="btn btn-primary">Quick Start</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Why CondensAI?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>🎯 Domain Specialized</h3>
+                <p>Trained on real condensed matter physics papers, textbooks, and research. Outperforms general LLMs on physics-specific questions.</p>
+            </div>
+            <div class="feature">
+                <h3>📚 RAG-Enhanced</h3>
+                <p>Retrieval-augmented generation from actual physics literature with citations to original papers.</p>
+            </div>
+            <div class="feature">
+                <h3>🚀 Easy Deployment</h3>
+                <p>One-click Colab demo, Streamlit UI, Docker deployment, and Hugging Face Spaces integration.</p>
+            </div>
+            <div class="feature">
+                <h3>📊 Evaluated</h3>
+                <p>CMPhysBench framework with 400+ questions across undergraduate, graduate, and research levels.</p>
+            </div>
+            <div class="feature">
+                <h3>💻 Consumer GPU Friendly</h3>
+                <p>LoRA fine-tuning with 4-bit quantization. Train on a single consumer GPU.</p>
+            </div>
+            <div class="feature">
+                <h3>🔬 Research Ready</h3>
+                <p>Complete with unit tests, CI/CD, documentation, and academic citation support.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quickstart" class="quickstart">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Quick Start (5 minutes)</h2>
+            <pre>
+# Step 1: Install
+pip install cm-expert-llm
+
+# Step 2: Verify installation
+python -m cm_expert.verify
+
+# Step 3: Run demo
+python examples/01_basic_usage.py
+
+# Step 4: Ask physics questions
+python -m cm_expert ask "What is the Meissner effect?"
+            </pre>
+            <p style="text-align: center; margin-top: 20px;">
+                <a href="https://github.com/Houchen181/cm-expert-llm#installation" class="btn">Full Installation Guide</a>
+                <a href="https://colab.research.google.com/github/Houchen181/cm-expert-llm/blob/main/examples/03_demo.ipynb" class="btn btn-primary">Try in Colab</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Project Structure</h2>
+        <pre>
+cm-expert-llm/
+├── src/cmp_expert/       # Core package
+│   ├── data/            # Data pipeline
+│   ├── training/        # LoRA training
+│   ├── eval/           # Benchmarks
+│   └── serve/          # RAG API
+├── configs/            # YAML configurations
+├── scripts/            # CLI tools
+├── data/raw/           # Physics content
+├── examples/           # Notebooks & demos
+├── docs/               # Documentation
+└── tests/              # Unit tests
+        </pre>
+    </section>
+
+    <section class="container" style="text-align: center;">
+        <h2>Ready to Build Your Physics Expert LLM?</h2>
+        <p style="margin: 20px 0;">Join researchers and developers using CondensAI for condensed matter physics.</p>
+        <a href="https://github.com/Houchen181/cm-expert-llm" class="btn btn-primary">Get Started on GitHub</a>
+        <a href="https://github.com/Houchen181/cm-expert-llm/tree/main/docs" class="btn">Documentation</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>CondensAI - Domain Expert LLM for Condensed Matter Physics</p>
+            <p>
+                <a href="https://github.com/Houchen181/cm-expert-llm">GitHub</a> •
+                <a href="https://github.com/Houchen181/cm-expert-llm/tree/main/docs">Docs</a> •
+                <a href="https://github.com/Houchen181/cm-expert-llm/issues">Issues</a> •
+                <a href="https://github.com/Houchen181/cm-expert-llm/discussions">Discussions</a>
+            </p>
+            <p style="opacity: 0.7; margin-top: 20px;">MIT License • Made with ❤️ for physics</p>
+        </div>
+    </footer>
+</body>
+</html>

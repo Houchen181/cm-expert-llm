@@ -1,0 +1,41 @@
+# Labeler configuration for automatic PR labeling
+
+# Code areas
+src:
+  - changed-files:
+      - any-glob-to-any-file: 'src/**/*'
+
+tests:
+  - changed-files:
+      - any-glob-to-any-file: 'tests/**/*'
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: 'docs/**/*'
+      - changed-files:
+          - any-glob-to-any-file: '**/*.md'
+
+examples:
+  - changed-files:
+      - any-glob-to-any-file: 'examples/**/*'
+
+configs:
+  - changed-files:
+      - any-glob-to-any-file: 'configs/**/*'
+
+ci-cd:
+  - changed-files:
+      - any-glob-to-any-file: '.github/workflows/**/*'
+
+# Physics topics
+superconductivity:
+  - changed-files:
+      - any-glob-to-any-file: 'data/raw/superconductivity/**/*'
+
+topology:
+  - changed-files:
+      - any-glob-to-any-file: 'data/raw/topology/**/*'
+
+correlated:
+  - changed-files:
+      - any-glob-to-any-file: 'data/raw/correlated/**/*'
