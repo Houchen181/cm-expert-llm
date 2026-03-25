@@ -46,3 +46,55 @@
 ---
 
 ## 2026-03-22 11:01 EDT - Heartbeat Run (Architecture Documentation Complete)
+
+## 2026-03-25 04:01 EDT - Heartbeat Run (HuggingFace Deploy Guide)
+**Status**: RESUMED, continuing proactive development toward 1k stars.
+
+**Completed**:
+- Created docs/HUGGINGFACE_DEPLOY.md: Step-by-step Hugging Face Spaces deployment guide
+- Commit: eeaac0
+
+**Why this helps 1k stars**:
+- Free demo hosting on HF Spaces = instant try
+- Access to 500k+ ML practitioners on Hugging Face
+- One-click deployment for forks
+
+---
+
+## 2026-03-25 07:01 EDT - Heartbeat Run (Auto-label + GitHub Pages + Social Preview)
+**Status**: RESUMED, continuing proactive development toward 1k stars.
+
+**Completed**:
+- Added .github/workflows/auto-label.yml - Auto-label issues
+- Added .github/labeler.yml - PR label configuration  
+- Created docs/index.html - GitHub Pages landing page
+- Created docs/og-image.svg - Social media preview image
+- Commit: 6b3583 pushed
+
+**Why this helps 1k stars**:
+- Auto-label = better issue management
+- GitHub Pages = professional website at houchen181.github.io/cm-expert-llm
+- Social preview = attractive cards on Twitter/LinkedIn
+- Professional polish signals active maintenance
+
+**Current repo state**:
+- All commits pushed, clean working tree (commit f6b3583)
+- 6 new files added this session
+- Production-ready for v0.1.0 release
+
+**Outstanding user actions**:
+- Enable GitHub Pages (Settings ¡ú Pages ¡ú Deploy from main)
+- Enable GitHub Discussions (Settings ¡ú Features ¡ú Discussions)
+- Deploy to Hugging Face Spaces (docs/HUGGINGFACE_DEPLOY.md)
+- Run release script (scripts/Prepare-Release.ps1)
+- Create v0.1.0 release tag
+
+**Next 5 steps**:
+1. User enables GitHub Pages
+2. User enables GitHub Discussions
+3. Deploy to Hugging Face Spaces
+4. Run release preparation script
+5. Create v0.1.0 release
+
+---
+*Updated: 2026-03-25 07:01 EDT*
